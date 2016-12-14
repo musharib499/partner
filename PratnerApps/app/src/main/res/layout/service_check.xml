@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    android:layout_margin="@dimen/margin_small"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle.NoPadding">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/ivService"
+            android:paddingTop="@dimen/margin_small"
+            android:layout_width="50dp"
+            app:tint_color="icon_color"
+            android:padding="@dimen/padding_small"
+            android:layout_height="50dp" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvService"/>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_large"
+        android:src="@drawable/ic_check"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:background="@android:drawable/screen_background_light_transparent"
+        app:tint_color="accent_color"
+        android:visibility="gone" />
+
+
+
+</com.gaadi.pratnerapps.theme.DealerCardView>

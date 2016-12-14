@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+    android:layout_margin="@dimen/margin_small"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerFrameLayout style="@style/layoutHeightWidthWrapStyling">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/im_view"
+            style="@style/ImageViewWithTintColor.SecondaryColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sedan" />
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/ivCheck"
+            style="@style/ImageViewWithTintColor.Accent"
+            app:tint_color="primary_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sedan"
+            android:visibility="gone" />
+    </com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tv_name"
+        style="@style/TextStyleNormal"
+        android:gravity="center"
+        android:paddingLeft="0dp"
+        android:text="car" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

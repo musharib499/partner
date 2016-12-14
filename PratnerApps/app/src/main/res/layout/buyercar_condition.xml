@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvTitleCheckBoxFragment"
+        style="@style/TextStyleNormal.Large.GridColor.Bold.LargePaading"
+        android:text="@string/conditions"
+        tools:text="@string/conditions" />
+
+    <include
+        android:id="@+id/vLine"
+        layout="@layout/border_view_match_width" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Overall Condition"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvCondition"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Exterior"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvExteriour"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <LinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Interior"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvInteriour"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </LinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <LinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Body \u0026 Frame"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvBodyFrame"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </LinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Engine/Transmission/Clutch"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvEngine"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="Suspensive/Steering"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvSuspensive"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <include layout="@layout/border_view_match_width" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:text="AC/Heater"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvAcHeater"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:hint="New Delhi"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

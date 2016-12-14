@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling.Padding"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/layoutTitle"
+        style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/border_view_match_height" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextStyleNormal.XLarge"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/btnRight"
+            style="@style/TextStyleNormal.Accent"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/view_all" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layoutTitle"
+        android:layout_height="wrap_content">
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:layout_height="match_parent"
+            android:id="@+id/cardBottom"
+            android:visibility="gone"
+            app:cardElevation="3dp"
+            style="@style/CardViewStyle.NoPadding"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:layout_marginLeft="@dimen/padding_medium"/>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            app:cardElevation="5dp"
+            android:id="@+id/contentCard"
+            style="@style/CardViewStyle">
+
+            <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+                style="@style/layoutHeightWrapWidthMatchStyling">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                <com.gaadi.pratnerapps.theme.DealerDotIndicator
+                    android:id="@+id/dotIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/view_pager"
+                    android:paddingBottom="@dimen/padding_normal_5dp"
+                    android:paddingTop="@dimen/padding_normal_5dp"
+                    app:tint_color="subtitle_color"
+                    app:numberOfDots="5"
+                    app:selectedDotIndex="0" />
+            </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+
+    </FrameLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

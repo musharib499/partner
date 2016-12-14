@@ -1,0 +1,186 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--controls the ‘normal’ state of components such as an unselected EditText, and unselected Checkboxes and RadioButtons-->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <!--controls the ripple coloring-->
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:colorControlHighlight" tools:targetApi="21">@color/colorAccent</item>
+        <!--overrides colorAccent as the activated or checked state for Checkboxes and RadioButtons-->
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <!--<item name="navigationBarColor">@color/colorPrimary</item>-->
+        <item name="android:colorPrimary" tools:targetApi="21">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">@color/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal" tools:targetApi="21">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/light_gray</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+    </style>
+
+    <style name="AppCompatNoActionBarTheme" parent="@style/AppTheme">
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textColorSecondary">@color/textColorPrimary</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@android:color/black</item>
+        <!--<item name="navigationBarColor">@color/colorPrimary</item>-->
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">1dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:tint" tools:targetApi="21">@color/colorAccent</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="CardViewStyleSmallMargin" parent="CardView">
+        <item name="cardCornerRadius">1dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:tint" tools:targetApi="21">@color/colorAccent</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:layout_marginLeft">@dimen/margin_small</item>
+        <item name="android:layout_marginRight">@dimen/margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/margin_xsmall</item>
+
+    </style>
+
+    <style name="CardViewStyleFromBottom" parent="CardView">
+        <item name="cardElevation">7dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:tint" tools:targetApi="21">@color/colorAccent</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="parentLayoutWidthMatchStyling" parent="layoutHeightWrapWidthMatchStyling"></style>
+
+    <style name="parentLayoutHeightWidthMatchMarginStyling" parent="parentLayoutHeightWidthMatchStyling">
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchPaddingStyling" parent="layoutHeightWidthMatchStyling">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling" parent="layoutHeightWidthMatchStyling"></style>
+
+    <style name="parentLayoutWidthMatchStylingPaddingStyling" parent="layoutHeightWrapWidthMatchStyling">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="pparentLayoutHeightWidthMatchPaddingStyling" parent="layoutHeightWidthMatchStyling">
+
+        <item name="android:padding">@dimen/padding_medium</item>
+
+    </style>
+
+    <style name="pparentLayoutHeightWidthWrapPaddingStyling" parent="layoutHeightWidthWrapStyling">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="layoutHeightWidthWrapStyling">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layoutHeightWrapWidthMatchStyling">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layoutHeightWidthMatchStyling">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TextStyleNormal">
+        <item name="android:color">@color/textSubColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="android:paddingLeft">@dimen/padding_small</item>
+        <item name="android:tint" tools:targetApi="21">@color/colorAccent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColorHighlight">@color/hintColor</item>
+    </style>
+
+    <style name="TextStyleBlackNormal" parent="TextStyleNormal">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleGrayNormal" parent="TextStyleNormal">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleSmall" parent="TextStyleNormal">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleLarge" parent="TextStyleNormal">
+        <item name="android:color">@color/textColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <!--<item name="android:singleLine">true</item>-->
+        <item name="android:textSize">@dimen/text_size_large</item>
+
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleRedLarge" parent="TextStyleNormal">
+        <item name="android:color">@color/textColor</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleGaadi" parent="TextStyleLarge">
+        <item name="android:color">@color/orange</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="TextStyleXLarge" parent="TextStyleLarge">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="TextStyleXXLarge" parent="TextStyleLarge">
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+
+    <style name="titleCheckBoxFragment">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="app_button">
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+</resources>

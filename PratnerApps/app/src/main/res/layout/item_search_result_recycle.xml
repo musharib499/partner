@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    style="@style/CardViewStyle">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:orientation="vertical">
+
+
+        <com.gaadi.pratnerapps.theme.DealerFrameLayout
+            android:id="@+id/search_car_tupple"
+            style="@style/layoutHeightWrapWidthMatchStyling">
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/imgCar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_tuple_image_height"
+                android:scaleType="centerCrop"
+                android:transitionName="car" />
+
+        <!--    <com.gaadi.pratnerapps.theme.DealerImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/padding_medium"
+                    android:src="@drawable/ic_heart" />-->
+
+        </com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+        <include layout="@layout/layout_buy_car_info" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <!-- <LinearLayout
+         style="@style/layoutHeightWidthWrapStyling"
+         android:layout_below="@id/search_car_tupple"
+         android:orientation="vertical"
+         android:padding="@dimen/padding_medium">
+
+         <TextView
+             android:id="@+id/tvMake"
+             style="@style/TextStyleNormal.Normall.Whitee.White" />
+
+         <TextView
+             android:id="@+id/tvModel"
+             style="@style/TextStyleSmallWhite" />
+         <LinearLayout
+             android:id="@+id/llCarDescription"
+             style="@style/layoutHeightWrapWidthMatchStyling"
+
+             android:orientation="horizontal">
+
+             <TextView
+                 android:id="@+id/tv_search_carPrice"
+                 style="@style/TextStyleNormall.Accent"
+                 tools:hint="@string/price" />
+
+             <TextView
+                 android:id="@+id/tv_search_car_emi"
+                 style="@style/TextStyleNormal"
+                 tools:hint="EMI 8,88889*" />
+
+         </LinearLayout>
+         <TextView
+             android:id="@+id/tv_model_year_model_fule"
+             style="@style/TextStyleNormal"
+             android:layout_below="@+id/llCarDescription"
+             tools:hint="2009" />
+     </LinearLayout>
+-->
+
+
+</com.gaadi.pratnerapps.theme.DealerCardView>

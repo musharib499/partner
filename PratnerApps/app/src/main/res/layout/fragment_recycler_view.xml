@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        style="@style/parentLayoutHeightWidthMatchStyling">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvEmptyview"
+        style="@style/TextStyleNormal.XLarge.Title"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/emptytext"
+        android:visibility="gone" />
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_filter_fill"
+        android:visibility="gone" />-->
+
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>

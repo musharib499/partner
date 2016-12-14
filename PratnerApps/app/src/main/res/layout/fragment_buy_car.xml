@@ -1,0 +1,6 @@
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flcontainer"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    tools:context=".fragments.buy_car.BuyCarFragment" />
+

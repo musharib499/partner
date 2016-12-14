@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutHeightWrapWidthMatchStyling.Padding">
+   <!-- <com.gaadi.pratnerapps.theme.DealerCheckbox
+        android:id="@+id/ckSelecction"
+        style="@style/TextStyleNormal"
+        android:padding="0dp"
+        android:visibility="gone" />-->
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tv_make"
+        style="@style/TextStyleNormal"
+        tools:text="Hundai" />
+
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

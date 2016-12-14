@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMenu"
+    android:orientation="horizontal"
+    style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:gravity="right|center_vertical">
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvItem"
+        style="@style/TextStyleNormal.Large"
+        />
+
+    <com.gaadi.pratnerapps.theme.DealerFAB
+        android:id="@+id/imItem"
+        style="@style/FabStylingMini"
+        app:elevation="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:fabSize="mini"
+        android:src="@drawable/ic_filter_fill"
+         />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

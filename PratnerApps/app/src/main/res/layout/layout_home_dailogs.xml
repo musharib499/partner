@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<com.gaadi.pratnerapps.theme.DealerCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/CardViewStyle"
+    android:padding="@dimen/padding_large"
+    android:background="@android:color/transparent"
+    >-->
+<com.gaadi.pratnerapps.theme.DealerLinearLayout style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="@dimen/padding_large"
+    android:paddingRight="@dimen/padding_large"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvId"
+            style="@style/TextStyleNormal.Large"
+            app:text_color="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:text="@string/do_you_really_want_to_exit"/>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+   style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <com.gaadi.pratnerapps.theme.DealerButton
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNoExit"
+        android:paddingLeft="@dimen/padding_xsmall"
+        android:paddingRight="@dimen/padding_xsmall"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_below="@+id/tvId"
+        android:text="@string/no" />
+    <com.gaadi.pratnerapps.theme.DealerButton
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnYesExit"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingLeft="@dimen/padding_xsmall"
+        android:paddingRight="@dimen/padding_xsmall"
+        android:layout_below="@+id/tvId"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:gravity="center"
+        android:text="@string/yes" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+      
+
+
+<!--
+
+
+</com.gaadi.pratnerapps.theme.DealerCardView>-->

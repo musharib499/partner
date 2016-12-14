@@ -1,0 +1,12 @@
+<com.gaadi.pratnerapps.theme.DealerLinearLayout android:layout_width="match_parent"
+    style="@style/parentLayoutHeightWidthMatchStyling.WrapHeight"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/iVPower"
+        style="@style/layoutHeightWidthWrapStyling"
+        android:visibility="visible"
+        android:background="@drawable/ic_gslogo" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

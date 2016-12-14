@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="background_color" format="string" />
+    <attr name="text_color" format="string" />
+    <attr name="text_color_selected" format="string" />
+    <attr name="text_color_unselected" format="string" />
+    <attr name="tint_color" format="string" />
+    <attr name="hint_color" format="string" />
+    <attr name="underline_color" format="string" />
+    <attr name="selected_background" format="string"/>
+    <attr name="select_tint_color" format="string"/>
+    <attr name="un_select_tint_color" format="string"/>
+
+    <declare-styleable name="DealerTextView">
+        <attr name="background_color" />
+        <attr name="text_color" />
+        <attr name="tint_color" />
+
+    </declare-styleable>
+    <declare-styleable name="DealerEditView">
+        <attr name="background_color" />
+        <attr name="text_color" />
+        <attr name="tint_color" />
+        <attr name="hint_color"/>
+    </declare-styleable>
+    <declare-styleable name="DealerTextInputLayout">
+        <attr name="background_color" />
+        <!--<attr name="text_hint_color" />
+        <attr name="text_color_accent"/>
+        <attr name="text_color_control_normal"/>
+        <attr name="text_color_control_activated"/>-->
+    </declare-styleable>
+
+    <declare-styleable name="DealerButton">
+        <attr name="background_color" />
+        <attr name="text_color" />
+        <attr name="tint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerRadioButton">
+        <attr name="background_color" />
+        <attr name="text_color" />
+        <attr name="select_tint_color" />
+        <attr name="un_select_tint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerLinearLayout">
+        <attr name="background_color" />
+    </declare-styleable>
+    <declare-styleable name="DealerHorizontalScrollView">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerFrameLayout">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerCoordinatorLayout">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerRelativeLayout">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerCardView">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerView">
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerAutoCompleteTextView">
+        <attr name="background_color"/>
+        <attr name="text_color"/>
+        <attr name="hint_color"/>
+        <attr name="tint_color"/>
+    </declare-styleable>
+
+    <declare-styleable name="DealerMaterialEditText">
+        <attr name="text_color" />
+        <attr name="underline_color" />
+        <attr name="hint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerMaterialTextView">
+        <attr name="text_color" />
+        <attr name="underline_color" />
+        <attr name="hint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerMaterialACTV">
+        <attr name="text_color" />
+        <attr name="underline_color" />
+        <attr name="hint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerCustomMaterialACTV">
+        <attr name="text_color" />
+        <attr name="tint_color" />
+        <attr name="underline_color" />
+        <attr name="hint_color" />
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerImageView">
+        <attr name="tint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerCheckbox">
+        <attr name="tint_color" />
+        <attr name="un_select_tint_color" />
+        <attr name="text_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerToolbar">
+        <attr name="tint_color" />
+        <attr name="text_color"/>
+        <attr name="background_color" />
+    </declare-styleable>
+    <declare-styleable name="DealerFAB">
+        <attr name="tint_color" />
+        <attr name="text_color" />
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerNavigationView">
+        <attr name="tint_color" />
+        <attr name="text_color"/>
+        <attr name="background_color" />
+        <attr name="selected_background" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerListView">
+        <attr name="tint_color" />
+        <attr name="text_color"/>
+        <attr name="background_color" />
+        <attr name="selected_background" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerTabLayout">
+        <attr name="tint_color" />
+        <attr name="text_color_selected"/>
+        <attr name="text_color_unselected"/>
+        <attr name="background_color" />
+        <attr name="underline_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerCollapsingToolbarLayout">
+        <attr name="content_scrim" format="string"/>
+        <attr name="background_color"/>
+    </declare-styleable>
+
+    <declare-styleable name="DealerProgressBar">
+        <attr name="tint_color" />
+    </declare-styleable>
+
+    <declare-styleable name="DealerDotIndicator">
+        <attr name="tint_color" />
+    </declare-styleable>
+
+</resources>

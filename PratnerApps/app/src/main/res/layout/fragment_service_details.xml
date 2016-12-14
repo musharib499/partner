@@ -1,0 +1,183 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthMatchStyling.Padding"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:id="@+id/llPickUp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                style="@style/layoutHeightWrapWidthMatchStyling"
+                android:gravity="center_vertical">
+
+                <include layout="@layout/border_view_match_height" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal.XLarge"
+                    android:text="@string/want_pick_up" />
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_medium">
+
+                <com.gaadi.pratnerapps.theme.DealerRadioButton
+                    android:id="@+id/radioYes"
+                    style="@style/radioButtonStyle"
+                    android:layout_width="0dp"
+                    android:checked="true"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.50"
+                    android:text="Yes" />
+
+                <com.gaadi.pratnerapps.theme.DealerRadioButton
+                    android:id="@+id/radioNo"
+                    style="@style/radioButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.50"
+                    android:text="No" />
+
+            </RadioGroup>
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center_vertical">
+
+            <include layout="@layout/border_view_match_height" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal.XLarge"
+                android:id="@+id/tvDetails" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:id="@+id/ilDetail"
+            style="@style/layoutHeightWrapWidthMatchStyling.leftPadding"
+            android:layout_below="@+id/borderIdPick"
+            android:orientation="horizontal">
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+                style="@style/TextLabel"
+                android:layout_weight="1">
+
+                <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                    android:id="@+id/etDatePick"
+                    style="@style/EditAutoTextStyle.MatchWidth"
+                    android:drawableRight="@drawable/ic_date"
+                    android:focusable="false"
+                    android:hint="@string/select_date" />
+
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+                style="@style/TextLabel"
+                android:layout_weight="1">
+
+                <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                    android:id="@+id/etTimePick"
+                    style="@style/EditAutoTextStyle.MatchWidth"
+                    android:drawableRight="@drawable/ic_schedule"
+                    android:focusable="false"
+                    android:hint="@string/select_time" />
+
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+            android:id="@+id/ilLocation"
+            style="@style/TextLabel"
+            android:layout_below="@id/ilDetail"
+            android:paddingLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/etLocation"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:drawableRight="@drawable/ic_my_location"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:hint="@string/pick_up_address_line1"
+                android:visibility="gone"/>
+
+
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center_vertical">
+
+            <include layout="@layout/border_view_match_height" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal.XLarge"
+                android:text="Enter Your Details" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+
+            style="@style/TextLabel"
+            android:layout_below="@id/ilDetail"
+            android:paddingLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/etName"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:imeOptions="actionNext"
+                android:hint="@string/personName" />
+
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+            style="@style/TextLabel"
+            android:layout_below="@id/ilDetail"
+            android:paddingLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/etContact"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:hint="@string/contactNum"
+                android:maxLength="10"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+            style="@style/TextLabel"
+            android:layout_below="@id/ilDetail"
+            android:paddingLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/etEmail"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:hint="@string/email_address"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress" />
+
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerButton
+            android:id="@+id/btn_continue"
+            style="@style/buttonStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:text="@string/continue_" />
+
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</ScrollView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/border_view_match_height"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_height="@dimen/text_size_xlarge"
+            android:layout_width="@dimen/padding_normal_5dp"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvFrndDetail"
+            style="@style/TextStyleNormal.XLarge"
+            android:text="Select Services" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <include
+        layout="@layout/layout_recycler_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_small"/>
+
+    <com.gaadi.pratnerapps.theme.DealerButton
+        style="@style/buttonStyle"
+        android:id="@+id/btnNext"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_small"
+        android:text="Proceed"/>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

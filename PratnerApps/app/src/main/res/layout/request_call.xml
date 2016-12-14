@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:layout_above="@+id/btnSubmit"
+        android:fillViewport="true">
+
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/parentLayoutHeightWidthMatchStyling.Padding"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_search_result_recycle" />
+
+            <!--<include layout="@layout/item_recycler_hz_recommendedcars"/>-->
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:visibility="gone"
+                android:text="The call would be made to below details"/>
+
+            <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+                android:id="@+id/etName"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:layout_below="@+id/tvYearFuelKm"
+                android:layout_marginTop="30dp"
+                android:hint="@string/personName"
+                android:enabled="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:imeOptions="actionNext"
+                app:met_floatingLabel="highlight" />
+
+            <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+                android:id="@+id/etEmail"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:layout_below="@+id/etName"
+                android:hint="@string/hint_email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                app:met_floatingLabel="highlight" />
+
+            <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+                android:id="@+id/etContactNum"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:layout_below="@+id/etEmail"
+                android:hint="@string/contactNum"
+                android:imeOptions="actionDone"
+                android:enabled="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="number"
+                android:maxLength="10"
+                app:met_floatingLabel="highlight" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+    </ScrollView>
+
+    <com.gaadi.pratnerapps.theme.DealerButton
+        android:id="@+id/btnSubmit"
+        style="@style/buttonStyle"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_submit" />
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+
+
+

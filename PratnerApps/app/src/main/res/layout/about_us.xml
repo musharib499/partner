@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include layout="@layout/border_view_match_height" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvAboutus"
+                style="@style/TextStyleNormal.Large.NoPadding"
+                android:text="About Us" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            style="@style/CardViewStyle"
+            android:layout_margin="0dp"
+            android:orientation="vertical">
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tv_description"
+            style="@style/TextStyleNormal"
+
+            android:text="@string/testinomial_description"/>
+
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            layout="@layout/layout_bottom_menu" />
+    </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+

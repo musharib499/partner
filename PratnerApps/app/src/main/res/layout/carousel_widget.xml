@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:orientation="horizontal">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|start"
+        android:layout_weight="0.5"
+        android:src="@drawable/car_placeholder" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tv_makeName"
+            style="@style/TextStyleNormal.Large"
+            android:text="@string/loving_it"
+
+            />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tv_price"
+            style="@style/TextStyleNormal"
+            android:text="@string/_1_1_cr" />
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:orientation="horizontal">
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_keyboard_control"
+                android:text="@string/automobile" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_keyboard_control"
+                android:text="@string/_2016" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:orientation="horizontal">
+
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_keyboard_control"
+                android:text="@string/_2000_kms" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_keyboard_control"
+                android:text="Petrol" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

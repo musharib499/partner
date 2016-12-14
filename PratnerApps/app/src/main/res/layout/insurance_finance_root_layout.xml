@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:id="@+id/root_container"
+            style="@style/CardViewStyle"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+           />
+
+        <LinearLayout
+            android:id="@+id/widgetContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+

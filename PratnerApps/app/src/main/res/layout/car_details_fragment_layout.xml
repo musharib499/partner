@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nestedScrollVw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerCustomMaterialACTV
+                android:id="@+id/tv_make"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:hint="Make*"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerCustomMaterialACTV
+                android:id="@+id/tv_model"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:enabled="false"
+                android:gravity="left|center_vertical"
+                android:hint="Model*"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_version"
+                style="@style/EditAutoTextStyle.MatchWidth"
+                android:focusable="false"
+                android:hint="Version"
+                android:imeOptions="actionNext" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_fuelType"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:focusable="false"
+                android:hint="Fuel Type"
+                android:imeOptions="actionDone" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/et_price"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/price_sellCars"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_regPlace"
+                style="@style/EditAutoTextStyle.MatchWidth"
+                android:hint="@string/regPlace"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_makeYear"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:focusable="false"
+                android:hint="Mfg. Year"
+                android:imeOptions="actionDone" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_makeMonth"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:focusable="false"
+                android:hint="Mfg. Month"
+                android:imeOptions="actionDone" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/et_kmsDriven"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:hint="@string/kmsDriven"
+                android:inputType="number"
+                android:maxLength="9"
+                android:imeOptions="actionDone"/>
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+
+        <com.gaadi.pratnerapps.theme.DealerButton
+            android:id="@+id/btn_submit"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:text="Submit" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerTabLayout
+        android:id="@+id/tabLayout"
+        style="@style/TablayoutStyle"
+        android:scrollbars="horizontal"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+         />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

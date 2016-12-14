@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" style="@style/parentLayoutHeightWidthMatchStyling"
+    >
+    <TextView
+       style="@style/TextStyleNormal.Heading"
+        android:text="sadfhdsdfhds"/>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

@@ -1,0 +1,9 @@
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:paddingTop="@dimen/padding_xlarge"
+    android:scrollbars="vertical">
+
+    <include layout="@layout/layout_recycler_view" />
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/showroom_imagesLayout"
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_marginLeft="16dp"
+                android:layout_height="@dimen/text_size_xlarge"
+                android:layout_width="@dimen/padding_normal_5dp"/>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tv_PremiumDealers"
+                style="@style/TextStyleNormal.XLarge" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    style="@style/ImageViewWithTintColor.SubTitle"
+                    android:src="@drawable/ic_place"/>
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_dealerAddress"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/contactNumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    style="@style/ImageViewWithTintColor.SubTitle"
+                    android:src="@drawable/ic_call"/>
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_dealerPhoneNum"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/emailIdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    style="@style/ImageViewWithTintColor.SubTitle"
+                    android:src="@drawable/ic_mail"/>
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_dealerEailId"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/layoutHeightWrapWidthMatchStyling"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/border_view_match_height"
+                    android:layout_marginLeft="16dp"
+                    android:layout_height="@dimen/text_size_xlarge"
+                    android:layout_width="@dimen/padding_normal_5dp"/>
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvGetDirection"
+                    style="@style/TextStyleNormal.XLarge" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/mapParentFrame"
+                android:layout_height="300dp">
+
+                <FrameLayout
+                    android:id="@+id/framelayout"
+                    style="@style/layoutHeightWrapWidthMatchStyling"
+                    android:layout_height="300dp">
+
+                </FrameLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</android.support.v4.widget.NestedScrollView>

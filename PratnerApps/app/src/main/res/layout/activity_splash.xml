@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/ivSplash"
+        style="@style/ImageViewStyle.MatchHW.NoPadding"
+        android:scaleType="fitXY" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/rlParentSplash"
+        style="@style/layoutHeightWidthMatchStyling"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/iVLogo"
+                style="@style/layoutHeightWidthWrapStyling"
+                android:layout_above="@+id/textView"
+                android:layout_gravity="center" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+        <!--  <com.gaadi.pratnerapps.theme.DealerLinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:gravity="center"
+              android:layout_weight="1">
+
+              <com.gaadi.pratnerapps.theme.DealerImageView
+                  android:id="@+id/iVPower"
+                  style="@style/layoutHeightWidthWrapStyling"
+                  android:visibility="gone"
+                  android:background="@drawable/ic_gslogo" />-->
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/textView"
+            style="@style/TextStyleNormal.XLarge.Title.Splash" />
+        <!--</com.gaadi.pratnerapps.theme.DealerLinearLayout>-->
+
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>

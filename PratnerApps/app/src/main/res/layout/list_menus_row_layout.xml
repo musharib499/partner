@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout style="@style/layoutHeightWidthMatchStyling.CardColor"
+  android:gravity="center_vertical"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<com.gaadi.pratnerapps.theme.DealerCardView style="@style/CardViewStyle.MenuColor"
+    android:layout_marginBottom="0dp"
+    android:padding="0dp"
+    >
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    android:orientation="horizontal"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="0dp"
+    android:paddingBottom="0dp"
+    android:id="@+id/menuLayout"
+    android:weightSum="3">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_ic_imageview"
+        style="@style/ImageViewWithTintColor"
+        android:layout_gravity="left|center_vertical"
+        android:src="@drawable/ic_buy_car"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/menu_textview"
+        style="@style/TextStyleNormal.IconColor"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_gravity="center_vertical"
+        android:text="Buy Car"/>
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        style="@style/ImageViewWithTintColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        android:id="@+id/dealerImageView" />
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</com.gaadi.pratnerapps.theme.DealerCardView>
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

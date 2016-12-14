@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_width="@dimen/padding_normal_5dp"
+                android:layout_height="@dimen/text_size_xlarge"
+                android:layout_marginLeft="@dimen/padding_medium" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvFrndDetail"
+                style="@style/TextStyleNormal.XLarge"
+                android:text="@string/review_booking" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            style="@style/CardViewStyle"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerRelativeLayout style="@style/layoutHeightWrapWidthMatchStyling">
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvServiceSelected"
+                    style="@style/TextStyleNormal.Heading"
+                    android:layout_alignParentTop="true"
+                    android:textStyle="bold"
+                    android:text="@string/services_selected" />
+
+                <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                    style="@style/layoutHeightWrapWidthMatchStyling"
+                    android:layout_below="@+id/tvServiceSelected"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                    <com.gaadi.pratnerapps.theme.DealerTextView
+                        android:id="@+id/tvCarServices"
+                        style="@style/TextStyleNormal" />
+
+
+                </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+            </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:id="@+id/cvPickUpDetails"
+            style="@style/CardViewStyle"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                style="@style/layoutHeightWrapWidthMatchStyling"
+                android:orientation="vertical">
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvPickUp"
+                    android:textStyle="bold"
+                    style="@style/TextStyleNormal.Heading"
+                    android:text="@string/pick_up_details" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvPickUpOn"
+                    style="@style/TextStyleNormal" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvPickUpFrom"
+                    android:visibility="gone"
+                    style="@style/TextStyleNormal" />
+
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            style="@style/CardViewStyle"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                style="@style/layoutHeightWrapWidthMatchStyling"
+                android:orientation="vertical">
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal.Heading"
+                    android:textStyle="bold"
+                    android:text="Your Details" />
+
+                <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                    style="@style/layoutHeightWrapWidthMatchStyling"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+
+                    <com.gaadi.pratnerapps.theme.DealerTextView
+                        android:id="@+id/tvName"
+                        style="@style/TextStyleNormal" />
+
+
+                    <com.gaadi.pratnerapps.theme.DealerTextView
+                        android:id="@id/tvMobile"
+                        style="@style/TextStyleNormal" />
+
+                </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tvEmai"
+                    style="@style/TextStyleNormal" />
+
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+
+        <com.gaadi.pratnerapps.theme.DealerButton
+            android:id="@+id/btnSubmit"
+            style="@style/buttonStyle"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:text="@string/btn_submit" />
+
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</ScrollView>

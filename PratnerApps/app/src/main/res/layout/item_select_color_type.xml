@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWrapWidthMatchStyling.Padding"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/view_color"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+       />
+    <View
+        android:id="@+id/ivCheck"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_check"
+        android:visibility="gone" />
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>

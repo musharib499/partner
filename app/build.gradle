@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        applicationId "com.gaadi.pratnerapps"
+        minSdkVersion project.MIN_SDK_VERSION
+        targetSdkVersion project.TARGET_SDK_VERSION
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName project.VERSION_NAME
+    }
+    buildTypes {
+        debug{
+            minifyEnabled false
+            debuggable true
+            buildConfigField "String", "REST_HOST", project.DEBUG_URL
+            buildConfigField "String", "ENVIRONMENT", "\"DEV\""
+        }
+        release {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "REST_HOST", project.RELEASE_URL
+            buildConfigField "String", "ENVIRONMENT", "\"PROD\""
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile project.MATERIAL_DESIGN_COMPAT
+    compile project.CARD_VIEW_COMPAT
+    compile project.GLIDE_LIBRARY
+    compile project.RECYCLER_VIEW_COMPAT
+    compile project.RETROFIT
+    compile project.JACKSON
+    compile project.LOGGING_INTERCEPTOR
+    compile project.RECYCLER_VIEW_COMPAT
+}

@@ -1,0 +1,8 @@
+<com.gaadi.pratnerapps.theme.DealerCheckbox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cb_item"
+    style="@style/TextStyleNormal.Large.FullWidth.LargePadding"
+    android:button="@null"
+    android:drawableRight="@drawable/check_box"
+    tools:text="item" />
+

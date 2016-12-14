@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_above="@+id/submit"
+    android:layout_marginLeft="@dimen/padding_normal_5dp"
+    android:layout_marginRight="@dimen/padding_normal_5dp"
+    android:paddingTop="@dimen/padding_medium"
+    android:paddingBottom="@dimen/padding_medium"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_name"
+        style="@style/EditStyleNormal.MatchWidth"
+        app:met_floatingLabelTextSize="@dimen/hintTextSize_12sp"
+        android:hint="@string/personName"
+        android:imeOptions="actionNext"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_ContactNum"
+        style="@style/EditStyleNormal.MatchWidth"
+        app:met_floatingLabelTextSize="@dimen/hintTextSize_12sp"
+        android:hint="@string/contactNum"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="10"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_email"
+        style="@style/EditStyleNormal.MatchWidth"
+        app:met_floatingLabelTextSize="@dimen/hintTextSize_12sp"
+        android:hint="@string/email"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:singleLine="true"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialACTV
+        android:id="@+id/et_location"
+        style="@style/EditStyleNormal.MatchWidth"
+        app:met_floatingLabelTextSize="@dimen/hintTextSize_12sp"
+        android:hint="@string/city"
+        android:imeOptions="actionDone"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerButton
+        android:id="@+id/btnSubmit"
+        style="@style/buttonStyle"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="Submit" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

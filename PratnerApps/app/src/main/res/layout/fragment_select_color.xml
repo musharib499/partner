@@ -1,0 +1,22 @@
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:orientation="vertical"
+    tools:context=".fragments.buy_car.BuyCarFilterColorFragment">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal.Large.Bold.LargePadding"
+
+        android:text="@string/color_type" />
+
+    <include layout="@layout/border_view_match_width" />
+
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout
+    style="@style/layoutHeightWrapWidthMatchStyling.Padding.Small"
+    android:gravity="center">
+    <include
+        layout="@layout/layout_recycler_view"/>
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

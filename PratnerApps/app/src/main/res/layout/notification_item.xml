@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentLayoutHeightWidthMatchStyling.Padding.WrapHeight"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextStyleNormal.Large.NoPadding"
+            android:layout_weight="1"
+            android:text="Abc" />
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvDate"
+            style="@style/TextStyleNormal"
+            android:text="date"/>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvDescription"
+        style="@style/TextStyleNormal"
+        android:text="testimonial" />
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvSecondaryText"
+        style="@style/TextStyleNormal"
+        android:text="SecondaryText" />
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/ivImage"
+        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        style="@style/ImageViewStyle.MatchHW" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

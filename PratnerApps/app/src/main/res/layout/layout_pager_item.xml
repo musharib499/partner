@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        />
+   <!-- <com.gaadi.pratnerapps.theme.DealerProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        app:tint_color="primary_color"
+        android:layout_gravity="center"/>-->
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/layoutHeightWidthMatchStyling"
+    android:gravity="center_horizontal">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/ivIcon"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_profile_placeholder"
+        android:elevation="@dimen/elevation_7dp"
+        />
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal.Large"
+        android:text="Guest"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="0dp"
+        android:id="@+id/tvName"/>
+   <!-- <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal"
+        android:text="Dealer"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="0dp"
+        android:visibility="gone"
+        android:id="@+id/tvRole"/>-->
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal"
+        android:textSize="12dp"
+        android:id="@+id/tvTestimonial"
+        android:text="@string/testinomial_description"/>
+
+</LinearLayout>

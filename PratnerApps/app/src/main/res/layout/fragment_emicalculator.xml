@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layoutHeightWidthMatchStyling"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium">
+
+    <com.gaadi.pratnerapps.theme.DealerCardView
+        android:id="@+id/cvLoanAmount"
+        style="@style/CardViewStyle">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling.Padding.Small"
+            android:orientation="vertical">
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/layoutHeightWrapWidthMatchStyling">
+
+                <com.gaadi.pratnerapps.theme.DealerEditText
+                    android:id="@+id/etLoanAmount"
+                    style="@style/EditTextInputStyle"
+                    android:gravity="center_vertical"
+                    android:hint="Loan Amount"
+                    android:maxLength="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal" />
+
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/layoutHeightWrapWidthMatchStyling">
+
+                <com.gaadi.pratnerapps.theme.DealerEditText
+                    android:id="@+id/etRateOfIntrest"
+                    style="@style/EditTextInputStyle"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:hint="Rate of Interest"
+                    android:maxLength="3"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"/>
+
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerButton
+                android:id="@+id/btnCalculateEMI"
+                style="@style/buttonStyle"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="CALCULATE EMI" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerCardView>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/emiDetails_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_width="@dimen/padding_normal_5dp"
+                android:layout_height="@dimen/text_size_xlarge" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvDetails"
+                style="@style/TextStyleNormal.XLarge"
+                android:text="Details" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:id="@+id/cardDetails"
+            style="@style/CardViewStyle">
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                style="@style/layoutHeightWrapWidthMatchStyling"
+                android:orientation="vertical">
+
+                <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+                    <com.gaadi.pratnerapps.theme.DealerTextView
+                        style="@style/TextStyleNormal"
+                        android:paddingBottom="@dimen/margin_medium"
+                        android:paddingTop="@dimen/margin_medium"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:text="Months" />
+
+                    <com.gaadi.pratnerapps.theme.DealerTextView
+                        style="@style/TextStyleNormal"
+                        android:paddingBottom="@dimen/margin_medium"
+                        android:paddingTop="@dimen/margin_medium"
+                        android:textStyle="bold"
+                        android:layout_marginRight="@dimen/padding_small"
+                        android:layout_alignParentRight="true"
+                        android:text="EMI(Rs.)" />
+                </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+                <include layout="@layout/border_view_match_width" />
+
+                <include layout="@layout/layout_recycler_view" />
+
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+        </com.gaadi.pratnerapps.theme.DealerCardView>
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

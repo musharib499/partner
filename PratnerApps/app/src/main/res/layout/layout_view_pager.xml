@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout style="@style/parentLayoutHeightWidthMatchStyling"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/ivLeftId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ImageViewWithTintColor"
+        android:src="@drawable/ic_keyboard_arrow_left"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/ivRightId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ImageViewWithTintColor"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+   <!-- <com.gaadi.pratnerapps.theme.DealerDotIndicator
+        android:id="@+id/dotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view_pager"
+        android:layout_gravity="bottom|center_horizontal"
+        android:paddingBottom="@dimen/padding_normal_5dp"
+        android:paddingTop="@dimen/padding_normal_5dp"
+        app:tint_color="normal_color"
+        app:numberOfDots="5"
+        app:selectedDotIndex="0" />-->
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

@@ -1,0 +1,44 @@
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    app:background_color="grid_background_color">
+    <!--<com.gaadi.pratnerapps.theme.DealerListView
+        android:id="@+id/listItem"
+        style="@style/ListViewStyling"
+        android:choiceMode="singleChoice"/>-->
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvPrice"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/Price"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvKm"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/km"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvMake"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/makemodel"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvAdvance"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/advance"/>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+
+

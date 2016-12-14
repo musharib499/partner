@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling">
+
+    <android.support.v4.widget.NestedScrollView
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:layout_above="@+id/layoutRequestCall"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/parentLayoutHeightWidthMatchStyling"
+            android:orientation="vertical">
+
+            <com.gaadi.pratnerapps.theme.DealerFrameLayout
+                android:id="@+id/flLocation"
+                style="@style/parentLayoutHeightWidthMatchStyling.Padding.WrapHeight" />
+
+            <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flVehicleOverview"
+                style="@style/CardViewStyle" />
+
+
+            <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flCondition"
+                style="@style/CardViewStyle" />
+
+            <!-- <com.gaadi.pratnerapps.theme.DealerCardView
+                 android:id="@+id/flSpecification"
+                 style="@style/CardViewStyle" />-->
+
+            <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flFeatures"
+                style="@style/CardViewStyle" />
+            <!--
+                <com.gaadi.pratnerapps.theme.DealerCardView
+                    android:id="@+id/flReview"
+                    style="@style/CardViewStyle" />
+
+                <com.gaadi.pratnerapps.theme.DealerCardView
+                    android:id="@+id/flVideo"
+                    style="@style/CardViewStyle" />-->
+
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:id="@+id/layoutRequestCall"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true" >
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvRequestCall"
+            style="@style/buttonStyle"
+            android:gravity="center"
+            android:text="@string/request_a_call" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        android:id="@+id/imgCar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:transitionName="car" />
+
+    <include layout="@layout/layout_buy_car_info" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

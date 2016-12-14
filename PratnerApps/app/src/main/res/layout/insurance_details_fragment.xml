@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_above="@+id/submit"
+    android:paddingTop="@dimen/padding_medium"
+    android:paddingBottom="@dimen/padding_medium"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RadioGroup
+            android:id="@+id/rGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gaadi.pratnerapps.theme.DealerRadioButton
+                android:id="@+id/rBtnNewInsurance"
+                style="@style/radioButtonStyle"
+                android:paddingLeft="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:singleLine="true"
+                android:text="New" />
+
+            <com.gaadi.pratnerapps.theme.DealerRadioButton
+                android:id="@+id/rBtnRenewInsurance"
+                style="@style/radioButtonStyle"
+                android:layout_width="0dp"
+                android:paddingLeft="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="Renew" />
+        </RadioGroup>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerCustomMaterialACTV
+                android:id="@+id/tv_make"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:hint="Make*"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerCustomMaterialACTV
+                android:id="@+id/tv_model"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:enabled="false"
+                android:gravity="left|center_vertical"
+                android:hint="Model*"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_version"
+                style="@style/EditAutoTextStyle.MatchWidth"
+                android:focusable="false"
+                android:hint="Version"
+                android:imeOptions="actionNext" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_makeYear"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:focusable="false"
+                android:hint="Mfg. Year"
+                android:imeOptions="actionDone" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_makeMonth"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:focusable="false"
+                android:hint="Mfg. Month"
+                android:imeOptions="actionDone" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+            <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                android:id="@+id/tv_regNum"
+                style="@style/EditAutoTextStyle.MatchWidth"
+                android:hint="Registration No"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/renewInsurancelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+                <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                    android:id="@+id/etPolicyNumber"
+                    style="@style/EditStyleNormal.MatchWidth"
+                    android:hint="Policy No"
+                    android:imeOptions="actionDone" />
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+                <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+                    android:id="@+id/tvDuePolicyDate"
+                    style="@style/EditStyleNormal.MatchWidth"
+                    android:focusable="false"
+                    android:hint="Due Date of Policy"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextInputLayout style="@style/TextLabel">
+
+                <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+
+                    android:id="@+id/tvCompany"
+                    style="@style/EditStyleNormal.MatchWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:hint="Company"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+            </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvUploadPolicy"
+                style="@style/TextStyleNormal.Demarcation"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text="Upload Policy" />
+
+            <ImageView
+                android:id="@+id/ivPolicyImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_xsmall"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/upload_pic_bg"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerButton
+            android:id="@+id/btnContinue"
+            style="@style/buttonStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_xsmall"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:text="Continue" />
+
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>

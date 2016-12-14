@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/toolbarInclude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:background_color="primary_color">
+
+        <include layout="@layout/toolbar_navigation" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerCardView
+        android:id="@+id/contentCard"
+        style="@style/CardViewStyle"
+        android:layout_below="@+id/toolbarInclude"
+        app:cardElevation="5dp">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/layoutAutoVerify"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_height="wrap_content">
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal.MatchWidth"
+                    app:text_color="secondary_info_text"
+                    android:paddingLeft="0dp"
+                    android:text="Auto Detecting OTP"/>
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    style="@style/TextStyleNormal"
+                    android:text=""
+                    app:text_color="secondary_info_text"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tvTimer"/>
+            </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal.MatchWidth"
+                android:text="number"
+                android:paddingLeft="0dp"
+                android:id="@+id/tvMobile"/>
+
+            <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+                android:id="@+id/etOTP"
+                style="@style/EditStyleNormal.MatchWidth"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:gravity="center_vertical"
+                android:maxLength="6"
+                android:hint="OTP"
+                android:paddingLeft="0dp"
+                android:inputType="number"/>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal.MatchWidth"
+                android:id="@+id/tvResendOtp"
+                android:onClick="onResend"
+                android:layout_marginTop="@dimen/margin_large"
+                android:paddingLeft="0dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="@string/otp_resend"/>
+
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerCardView>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:gravity="center"
+        android:layout_below="@+id/contentCard"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerFAB
+            android:id="@+id/btn_next"
+            style="@style/FabStyling"
+            android:onClick="onVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:onClick="onSkip"
+            android:text="@string/skip_text" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

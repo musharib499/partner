@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:paddingTop="@dimen/padding_small"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvMake"
+            style="@style/TextStyleNormal.Large"
+            android:layout_weight="1"
+            tools:text="" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvPrice"
+            style="@style/TextStyleNormal.Large"
+            android:gravity="right"
+            android:paddingRight="@dimen/padding_normal_5dp"
+            android:singleLine="true"
+            tools:text="\u20b9 3.43 Lakh" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthWrapStyling"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            style="@style/ImageViewWithTintColor.SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place_small" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvAddress"
+            style="@style/TextStyleNormal"
+            tools:text="" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+    <!--<com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="horizontal">
+-->
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvYearKilFuel"
+        style="@style/TextStyleNormal.Small"
+        android:layout_gravity="center_vertical"
+        tools:text="@string/year_kms_type" />
+    <!--</com.gaadi.pratnerapps.theme.DealerLinearLayout>-->
+
+    <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+        android:id="@+id/layoutRequestCall"
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginRight="@dimen/margin_small"
+        android:orientation="horizontal">
+        <include
+            layout="@layout/border_view_match_width"
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_height=".01dp" />
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvCallnow"
+            android:layout_below="@+id/viewDivider"
+            style="@style/TextStyleNormal.Large.Accent"
+            android:singleLine="true"
+            android:text="@string/call_now" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvRequest"
+            android:layout_below="@+id/viewDivider"
+            style="@style/TextStyleNormal.Large.Accent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="@string/request_a_call" />
+
+
+        <!-- </com.gaadi.pratnerapps.theme.DealerLinearLayout>-->
+    </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

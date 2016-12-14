@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_sort"
+        app:showAsAction="always"
+        android:title="">
+        <menu>
+    <item
+        android:id="@+id/itemSortBy"
+        app:actionLayout="@layout/menu_item_layout"
+        android:title="@string/sort_by"
+
+        />
+    <item
+        android:id="@+id/itemPLtH"
+        android:title="@string/price_low_to_high" />
+    <item
+        android:id="@+id/itemPHTL"
+        android:title="@string/price_high_to_low" />
+    <item
+        android:id="@+id/itemKLTH"
+        android:title="@string/km_low_to_high" />
+    <item
+        android:id="@+id/itemKHTL"
+        android:title="@string/km_high_to_low" />
+    <item
+        android:id="@+id/itemOld"
+        android:title="@string/oldest" />
+    <item
+        android:id="@+id/itemNewest"
+        android:title="@string/newest" />
+        </menu>
+</item>
+
+</menu>

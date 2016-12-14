@@ -1,0 +1,15 @@
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="vertical"
+    tools:context=".fragments.buy_car.BuyCarFilterPriceRangeFragment">
+
+    <!-- <com.gaadi.pratnerapps.theme.DealerTextView
+         style="@style/TextStyleNormal.Large.Bold.LargePadding"
+         android:text="@string/price" />
+
+     <include layout="@layout/border_view_match_width" />-->
+    <include layout="@layout/layout_recycler_view" />
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

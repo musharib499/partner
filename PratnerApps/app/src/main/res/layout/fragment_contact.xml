@@ -1,0 +1,214 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:orientation="vertical"
+        tools:context="com.gaadi.pratnerapps.fragments.ContactFragment">
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_marginLeft="16dp"
+                android:layout_height="@dimen/text_size_xlarge"
+                android:layout_width="@dimen/padding_normal_5dp" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvPremium"
+                style="@style/TextStyleNormal.XLarge" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    style="@style/ImageViewWithTintColor"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_place" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tv_dealerAddress"
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical" />
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                android:id="@+id/contactNumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    style="@style/ImageViewWithTintColor"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_call" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tv_dealerPhoneNum"
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical" />
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+            <com.gaadi.pratnerapps.theme.DealerLinearLayout
+                android:id="@+id/emailIdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.gaadi.pratnerapps.theme.DealerImageView
+                    style="@style/ImageViewWithTintColor"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_mail" />
+
+                <com.gaadi.pratnerapps.theme.DealerTextView
+                    android:id="@+id/tv_dealerEailId"
+                    style="@style/TextStyleNormal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical" />
+            </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginTop="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_marginLeft="16dp"
+                android:layout_height="@dimen/text_size_xlarge"
+                android:layout_width="@dimen/padding_normal_5dp"/>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvContactWithUs"
+                style="@style/TextStyleNormal.XLarge" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+       <!-- <com.gaadi.pratnerapps.theme.DealerHorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:measureAllChildren="false"
+            android:scrollbars="none" >-->
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/iv_whatsApp"
+                style="@style/ImageViewStyle"
+                android:layout_weight="1"
+                android:layout_width="64dp"
+                android:visibility="gone"
+                android:layout_height="64dp"
+                android:src="@drawable/whatsup" />
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/iv_googlePlus"
+                style="@style/ImageViewStyle"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/google_plus" />
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/iv_Facebook"
+                style="@style/ImageViewStyle"
+                android:layout_weight="1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:visibility="gone"
+                android:src="@drawable/facebook" />
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/iv_Twitter"
+                style="@style/ImageViewStyle"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/twitter" />
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/ivInstagram"
+                style="@style/ImageViewStyle"
+                android:layout_width="64dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_instagram" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+       <!-- </com.gaadi.pratnerapps.theme.DealerHorizontalScrollView>
+-->
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            style="@style/layoutHeightWrapWidthMatchStyling"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/border_view_match_height"
+                android:layout_marginLeft="16dp"
+                android:layout_height="@dimen/text_size_xlarge"
+                android:layout_width="@dimen/padding_normal_5dp" />
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tvGetDirection"
+                style="@style/TextStyleNormal.XLarge" />
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/mapLayout"
+                layout="@layout/fragment_map" />
+
+            <com.gaadi.pratnerapps.theme.DealerImageView
+                android:id="@+id/transparent_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/transparent" />
+
+        </com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</android.support.v4.widget.NestedScrollView>

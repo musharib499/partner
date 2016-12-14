@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentLayoutHeightWidthMatchStyling.Accent.Padding.WrapHeight">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/buyCar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/buy_car" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Small.Title"
+            android:text="Buy Car" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/seelCar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/sell_car" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Small.Title"
+            android:text="SellCar" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:id="@+id/share"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/share" />
+
+        <TextView
+            style="@style/TextStyleNormal.Small.Title"
+            android:text="Share" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <LinearLayout
+        android:id="@+id/showroom"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/showroom" />
+
+        <TextView
+            style="@style/TextStyleNormal.Small.Title"
+            android:text="Showroom" />
+
+    </LinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

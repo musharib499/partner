@@ -1,0 +1,596 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--controls the ‘normal’ state of components such as an unselected EditText, and unselected Checkboxes and RadioButtons-->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <!--controls the ripple coloring-->
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:colorControlHighlight" tools:targetApi="21">@color/colorAccent</item>
+        <!--overrides colorAccent as the activated or checked state for Checkboxes and RadioButtons-->
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <!--<item name="navigationBarColor">@color/colorPrimary</item>-->
+        <item name="android:colorPrimary" tools:targetApi="21">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark" tools:targetApi="21">@color/colorPrimaryDark</item>
+        <item name="android:colorButtonNormal" tools:targetApi="21">@color/colorAccent</item>
+        <item name="background_color">background_color</item>
+
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent" tools:targetApi="21">@color/colorAccent</item>
+        <item name="colorPrimaryDark" tools:targetApi="21">@color/colorPrimaryDark</item>
+        <item name="colorPrimary" tools:targetApi="21">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppCompatNoActionBarTheme" parent="@style/AppTheme">
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@android:color/black</item>
+        <!--<item name="navigationBarColor">@color/colorPrimary</item>-->
+
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_small</item>
+        <item name="android:layout_marginRight">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="contentPadding">@dimen/padding_xsmall</item>
+        <item name="android:padding">@dimen/padding_xsmall</item>
+        <item name="background_color">card_color</item>
+    </style>
+
+    <style name="CardViewStyle.MenuColor">
+        <item name="background_color">menu_card_color</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+    </style>
+    <style name="CardViewStyle.NoPadding">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="contentPadding">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+        <style name="parentLayoutHeightWidthMatchStyling.WrapHeight">
+            <item name="android:layout_height">wrap_content</item>
+        </style>
+
+        <style name="parentLayoutHeightWidthMatchStyling" parent="layoutHeightWidthMatchStyling">
+            <item name="background_color">background_color</item>
+        </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Padding">
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+
+        <style name="parentLayoutHeightWidthMatchStyling.TopBottomPadding">
+            <item name="android:paddingTop">@dimen/padding_small</item>
+            <item name="android:paddingBottom">@dimen/padding_small</item>
+        </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Padding.Splash">
+
+    </style>
+
+
+    <style name="parentLayoutHeightWidthMatchStyling.Padding.WrapHeight">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+
+    <style name="parentLayoutHeightWidthMatchStyling.Accent">
+        <item name="background_color">accent_color</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Accent.WrapHeight">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Accent.Padding">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Accent.Padding.Splash"></style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Accent.Padding.WrapHeight">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+    <style name="parentLayoutHeightWidthMatchStyling.Primary">
+        <item name="background_color">primary_color</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Primary.WrapHeight">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Primary.Padding">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Primary.Padding.Splash"></style>
+
+    <style name="parentLayoutHeightWidthMatchStyling.Primary.Padding.WrapHeight">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+
+
+
+
+    <style name="layoutHeightWidthWrapStyling">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layoutHeightWrapWidthMatchStyling">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="layoutHeightWrapWidthMatchStyling.leftPadding">
+    <item name="android:paddingLeft">@dimen/padding_medium</item>
+    </style>
+    <style name="layoutHeightWrapWidthMatchStyling.CardColor">
+        <item name="background_color">primary_color</item>
+    </style>
+    <style name="layoutHeightWrapWidthMatchStyling.CardColor.Padding">
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+    </style>
+    <style name="layoutHeightWrapWidthMatchStyling.CardColor.Padding.Small">
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="background_color">menu_card_color</item>
+    </style>
+    <style name="layoutHeightWrapWidthMatchStyling.Padding">
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+    </style>
+
+    <style name="layoutHeightWrapWidthMatchStyling.Padding.Small">
+
+        <item name="android:padding">@dimen/padding_small</item>
+
+
+    </style>
+
+    <style name="layoutHeightWidthMatchStyling">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="layoutHeightWidthMatchStyling.CardColor">
+        <item name="background_color">card_color</item>
+    </style>
+    <style name="layoutHeightWidthMatchStyling.Padding">
+        <item name="android:padding">@dimen/padding_medium</item>
+    </style>
+<style name="ExpandTextSize">
+
+    <item name="android:textSize">@dimen/text_size_xlarge</item>
+</style>
+    <style name="TextStyleNormal">
+        <item name="text_color">subtitle_color</item>
+        <item name="hint_color">secondary_info_text</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="tint_color" >title_color_icon_color</item>
+        <item name="android:drawablePadding">@dimen/padding_medium</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+
+    <style name="TextStyleNormal.Large.Bold.NoTopBottomPadding">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+
+    <!--  <style name="TextStyleNormal.White">-->
+    <!--      <item name="android:textColor">@color/white</item>-->
+    <!--  </style>-->
+    <!--<style name="TextStyleNormal.Black" >
+        <item name="android:textColor">@color/black</item>
+
+        &lt;!&ndash;<item name="android:ellipsize">end</item>&ndash;&gt;
+    </style>-->
+    <style name="TextStyleNormal.MatchWidth">
+
+        <item name="android:layout_width">match_parent</item>
+
+    </style>
+
+    <style name="TextStyleNormal.MatchWidth.LargePadding">
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleNormal.MatchWidth.NoPadding">
+
+        <item name="android:paddingLeft">0dp</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+
+    <style name="TextStyleNormal.grayBorder">
+        <item name="android:background">@drawable/border_bottom</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+    </style>
+
+   <!-- <style name="TextStyleNormal.Primary">
+        <item name="text_color">primary_color</item>
+    </style>-->
+    <style name="TextStyleNormal.Accent">
+        <item name="text_color">accent_color</item>
+    </style>
+    <style name="TextStyleNormal.Heading">
+        <item name="text_color">heading_color</item>
+    </style>
+    <style name="TextStyleNormal.IconColor">
+        <item name="text_color">icon_color</item>
+    </style>
+
+    <style name="TextStyleNormal.Title">
+        <item name="text_color">title_color_icon_color</item>
+    </style>
+
+
+    <style name="TextStyleNormal.Dark">
+        <item name="text_color">heading_color</item>
+        <item name="android:inputType">textCapWords|textNoSuggestions</item>
+    </style>
+    <style name="TextStyleNormal.Demarcation">
+        <item name="text_color">@color/colorAccent</item>
+        <item name="android:inputType">textCapWords|textNoSuggestions</item>
+    </style>
+
+    <style name="TextStyleNormal.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="text_color">secondary_info_text</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleNormal.Small.Title">
+        <item name="text_color">title_color_icon_color</item>
+    </style>
+
+    <style name="TablayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="text_color_selected">title_color_icon_color</item>
+        <item name="text_color_unselected">subtitle_color</item>
+        <item name="underline_color">title_color_icon_color</item>
+        <item name="tint_color">title_color_icon_color</item>
+        <item name="background_color">primary_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="TextStyleNormal.Large">
+        <item name="text_color">heading_color</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="TextStyleNormal.Large18">
+        <item name="text_color">heading_color</item>
+        <item name="android:textSize">@dimen/text_size_large18</item>
+    </style>
+    <style name="TextStyleNormal.Large.NoPadding">
+        <item name="text_color">heading_color</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="checKBoxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="text_color">subtitle_color</item>
+        <item name="tint_color">accent_color</item>
+        <item name="un_select_tint_color">subtitle_color</item>
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="TextStyleNormal.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyleNormal.Large.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextStyleNormal.Large.GridColor">
+        <item name="text_color">grid_heading</item>
+    </style>
+    <style name="TextStyleNormal.Large.GridColor.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextStyleNormal.Large.GridColor.Bold.LargePaading">
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+    </style>
+    <style name="TextStyleNormal.Large.Bold.LargePadding">
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+    </style>
+    <style name="TextStyleNormal.Large.Accent">
+        <item name="text_color">accent_color</item>
+
+    </style>
+
+    <style name="TextStyleNormal.Large.FullWidth">
+        <item name="android:layout_width">match_parent</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleNormal.Large.FullWidth.LargePadding">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_xlarge</item>
+        <item name="android:paddingBottom">@dimen/padding_xlarge</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleNormal.Large.Title">
+        <item name="text_color">title_color_icon_color</item>
+
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+    <style name="TextStyleNormal.Large18.Title">
+        <item name="text_color">title_color_icon_color</item>
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleNormal.Large.Black">
+        <item name="android:textColor">@color/black</item>
+
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleXXLarge.White" parent="TextStyleXXLarge">
+        <item name="text_color">text_color</item>
+
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="TextStyleLarge.LeftBorder" parent="TextStyleNormal">
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:background">@drawable/border_line</item>
+    </style>
+
+    <style name="FabStyling">
+        <item name="tint_color">title_color_icon_color</item>
+        <item name="background_color">accent_color</item>
+    </style>
+    <style name="FabStylingMini">
+        <item name="background_color">card_color</item>
+        <item name="tint_color">icon_color</item>
+
+    </style>
+    <style name="ListViewStyling">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="text_color">text_color</item>
+        <item name="tint_color">background_color</item>
+        <item name="background_color">card_color</item>
+    </style>
+
+    <style name="TextStyleGaadi" parent="TextStyleNormal.Large">
+        <item name="android:color">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyleNormal.XLarge">
+        <item name="text_color">heading_color</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+    <style name="TextStyleNormal.XLarge.Title">
+        <item name="text_color">title_color_icon_color</item>
+    </style>
+
+    <style name="TextStyleNormal.XLarge.Title.Splash">
+        <item name="text_color">text_color</item>
+    </style>
+
+    <style name="TextStyleXXLarge" parent="TextStyleNormal.Large">
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+
+    <style name="EditStyleNormal" parent="Base.Widget.AppCompat.EditText">
+
+        <item name="text_color">subtitle_color</item>
+        <item name="hint_color">secondary_info_text</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="tint_color" >subtitle_color</item>
+        <item name="android:gravity">center_vertical</item>
+       <!-- <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:inputType">text|textNoSuggestions</item>
+        <item name="android:singleLine">true</item>
+        <item name="underline_color">demarcation_line_color</item>
+    </style>
+
+
+    <style name="EditAutoTextStyle" parent="Widget.AppCompat.AutoCompleteTextView">
+
+        <item name="text_color">subtitle_color</item>
+        <item name="hint_color">secondary_info_text</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="tint_color">subtitle_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <!-- <item name="android:paddingTop">@dimen/padding_small</item>
+         <item name="android:paddingBottom">@dimen/padding_small</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:inputType">text|textNoSuggestions</item>
+        <item name="android:singleLine">true</item>
+        <item name="underline_color">demarcation_line_color</item>
+    </style>
+
+    <style name="DropDownList" >
+
+        <item name="text_color">normal_color</item>
+        <item name="hint_color">secondary_info_text</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="tint_color">title_color_icon_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">text</item>
+        <item name="android:singleLine">true</item>
+        <item name="underline_color">demarcation_line_color</item>
+
+    </style>
+    <style name="EditStyleNormal.MatchWidth.CustomAuto">
+       <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="EditStyleNormal.MatchWidth">
+        <item name="underline_color">demarcation_line_color</item>
+
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="EditAutoTextStyle.MatchWidth">
+        <item name="underline_color">demarcation_line_color</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="EditTextInputStyle" parent="EditStyleNormal">
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="DealerDividerView">
+        <item name="background_color">demarcation_line_color</item>
+    </style>
+
+    <style name="DealerDividerView.Primary">
+        <item name="background_color">primary_color</item>
+    </style>
+
+    <style name="titleCheckBoxFragment">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="TextLabel" parent="Widget.Design.TextInputLayout">
+
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+    </style>
+    <style name="app_button">
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="ImageViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="ImageViewStyle.MatchHW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="ImageViewStyle.MatchHW.NoPadding">
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="ImageViewWithTintColor">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="tint_color">icon_color</item>
+    </style>
+    <style name="ImageViewWithTintColor.SecondaryColor">
+        <item name="tint_color">secondary_info_text</item>
+    </style>
+    <style name="ImageViewWithTintColor.HeadingColor">
+        <item name="tint_color">heading_color</item>
+    </style>
+    <style name="ImageViewWithTintColor.SubTitle">
+        <item name="tint_color">subtitle_color</item>
+    </style>
+    <style name="ImageViewWithTintColor.TitleColor">
+        <item name="tint_color">title_color_icon_color</item>
+    </style>
+    <style name="ImageViewWithTintColor.Accent">
+        <item name="tint_color">accent_color</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ParantLayoutStyling">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="autoCompleteTextViewStyle" parent="DropDownList">
+
+        <item name="android:background">@drawable/abc_edit_text_material</item>
+        <item name="android:paddingTop">@dimen/padding_large</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:paddingLeft">@dimen/padding_medium</item>
+        <item name="android:paddingRight">@dimen/padding_medium</item>
+        <item name="text_color">title_color_icon_color</item>
+        <item name="background_color">accent_color</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="radioButtonStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:paddingLeft">@dimen/padding_small</item>
+        <item name="android:paddingRight">@dimen/padding_small</item>
+        <item name="tint_color">subtitle_color</item>
+        <item name="text_color">subtitle_color</item>
+        <item name="select_tint_color">accent_color</item>
+        <item name="un_select_tint_color">subtitle_color</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling.Padding"
+    android:orientation="vertical">
+
+
+    <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+
+        style="@style/TextLabel">
+
+        <com.gaadi.pratnerapps.theme.DealerEditText
+            android:id="@+id/etName"
+            style="@style/EditStyleNormal.MatchWidth"
+            android:imeOptions="actionNext"
+            android:hint="@string/name" />
+
+    </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvUploadPic"
+        style="@style/TextStyleNormal"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:text_color="demarcation_line_color"
+        android:singleLine="true"
+        android:text="@string/upload_pic"/>
+
+    <ImageView
+        android:id="@+id/ivUploadImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_xsmall"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/upload_pic_bg"
+        android:scaleType="fitCenter" />
+
+    <!--<com.gaadi.pratnerapps.theme.DealerTextInputLayout
+        style="@style/TextLabel"
+        android:paddingLeft="@dimen/padding_medium">
+
+        <com.gaadi.pratnerapps.theme.DealerAutoCompleteTextView
+            android:id="@+id/etPicture"
+            style="@style/EditStyleNormal.MatchWidth"
+            android:editable="false"
+            android:enabled="false"
+            android:drawableRight="@drawable/camera"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:hint="@string/upload_pic" />
+
+    </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/picLayout">
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_pic"
+            android:paddingLeft="@dimen/padding_medium"/>
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uploadPic"/>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>-->
+
+    <com.gaadi.pratnerapps.theme.DealerTextInputLayout
+        style="@style/TextLabel">
+
+        <com.gaadi.pratnerapps.theme.DealerEditText
+            android:id="@+id/etTestimonial"
+            style="@style/EditStyleNormal.MatchWidth"
+            android:hint="@string/testimonial_text"
+            android:imeOptions="actionDone"
+            android:inputType="text" />
+
+    </com.gaadi.pratnerapps.theme.DealerTextInputLayout>
+
+
+    <com.gaadi.pratnerapps.theme.DealerButton
+        android:id="@+id/btnSubmit"
+        style="@style/buttonStyle"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_xsmall"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/btn_submit" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+
+
+
+
+
+
+
+
+

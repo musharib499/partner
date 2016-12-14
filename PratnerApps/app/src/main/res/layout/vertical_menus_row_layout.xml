@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/padding_medium"
+    android:id="@+id/menuLayout">
+
+    <com.gaadi.pratnerapps.theme.DealerImageView
+        style="@style/ImageViewWithTintColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_ic_imageview"
+        android:padding="@dimen/padding_normal_5dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_buy_car"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/menu_textview"
+        style="@style/TextStyleNormal"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:text="Buy Car"/>
+
+
+</LinearLayout>

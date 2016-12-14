@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "215131612211",
+    "project_id": "partnerapps-4e06"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215131612211:android:f9fa62757914de3f",
+        "android_client_info": {
+          "package_name": "com.gaadi.partnerapps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkdeKS9FrcKLA1MPfd0UbU6LxQ4tJLmrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-81311476-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

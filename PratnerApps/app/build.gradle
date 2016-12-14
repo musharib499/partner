@@ -1,0 +1,755 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+//apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+
+    signingConfigs {
+        dev {
+            keyAlias 'keystore_dev'
+            keyPassword '123456'
+            storeFile file(project.DEV_SIGNING_KEY)
+            storePassword '123456'
+        }
+        qadc {
+            keyAlias 'keystore_dev'
+            keyPassword '123456'
+            storeFile file(project.DEV_SIGNING_KEY)
+            storePassword '123456'
+        }
+        release {
+            keyAlias 'dealer_app'
+            keyPassword 'dealer@gaadi@2016'
+            storeFile file(project.RELEASE_SIGNING_KEY)
+            storePassword 'dealer@gaadi@2016'
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion project.MIN_SDK_VERSION
+        targetSdkVersion project.TARGET_SDK_VERSION
+        /*application not run nextbitrobin use this contains*/
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+        }
+        packagingOptions {
+            exclude "lib/arm64-v8a/librealm-jni.so"
+        }
+
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            buildConfigField "String", "REST_HOST", project.DEBUG_URL
+            multiDexEnabled true
+            applicationIdSuffix ".dev"
+        }
+        qadc {
+            minifyEnabled false
+            debuggable true
+            buildConfigField "String", "REST_HOST", project.QADC_URL
+            multiDexEnabled true
+            applicationIdSuffix ".dev"
+            signingConfig signingConfigs.qadc
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "REST_HOST", project.RELEASE_URL
+            multiDexEnabled true
+            signingConfig signingConfigs.release
+        }
+        staging {
+            minifyEnabled true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "REST_HOST", project.STG_URL
+            multiDexEnabled true
+            applicationIdSuffix ".stg"
+            signingConfig signingConfigs.dev
+        }
+    }
+
+    productFlavors {
+        gaadi {
+            buildConfigField "String", "DEALER_ID", "\"" + project.GAADI_DEALER_ID + "\""
+            versionCode Integer.parseInt(GAADI_VERSION_CODE)
+            versionName project.GAADI_VERSION_NAME
+            applicationId project.GAADI_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.GAADI_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.GAADI_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        autotraders {
+            buildConfigField "String", "DEALER_ID", "\"" + project.AUTOTRADERS_DEALER_ID + "\""
+            versionCode Integer.parseInt(AUTOTRADERS_VERSION_CODE)
+            versionName project.AUTOTRADERS_VERSION_NAME
+            applicationId project.AUTOTRADERS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.AUTOTRADERS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.AUTOTRADERS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        eshwari {
+            buildConfigField "String", "DEALER_ID", "\"" + project.ESHWARI_DEALER_ID + "\""
+            versionCode Integer.parseInt(ESHWARI_VERSION_CODE)
+            versionName project.ESHWARI_VERSION_NAME
+            applicationId project.ESHWARI_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.ESHWARI_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.ESHWARI_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        luxury {
+            buildConfigField "String", "DEALER_ID", "\"" + project.LUXURY_DEALER_ID + "\""
+            versionCode Integer.parseInt(LUXURY_VERSION_CODE)
+            versionName project.LUXURY_VERSION_NAME
+            applicationId project.LUXURY_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.LUXURY_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.LUXURY_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        ennkay {
+            buildConfigField "String", "DEALER_ID", "\"" + project.ENN_KAY_DEALER_ID + "\""
+            versionCode Integer.parseInt(ENN_KAY_VERSION_CODE)
+            versionName project.ENN_KAY_VERSION_NAME
+            applicationId project.ENN_KAY_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.ENN_KAY_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.ENN_KAY_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        avrymotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.AVRY_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(AVRY_MOTORS_VERSION_CODE)
+            versionName project.AVRY_MOTORS_VERSION_NAME
+            applicationId project.AVRY_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.AVRY_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.AVRY_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        carmall {
+            buildConfigField "String", "DEALER_ID", "\"" + project.CAR_MALL_DEALER_ID + "\""
+            versionCode Integer.parseInt(CAR_MALL_VERSION_CODE)
+            versionName project.CAR_MALL_VERSION_NAME
+            applicationId project.CAR_MALL_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.CAR_MALL_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.CAR_MALL_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        carworld {
+            buildConfigField "String", "DEALER_ID", "\"" + project.CAR_WORLD_DEALER_ID + "\""
+            versionCode Integer.parseInt(CAR_WORLD_VERSION_CODE)
+            versionName project.CAR_WORLD_VERSION_NAME
+            applicationId project.CAR_WORLD_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.CAR_WORLD_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.CAR_WORLD_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        caravan {
+            buildConfigField "String", "DEALER_ID", "\"" + project.CARAVAN_DEALER_ID + "\""
+            versionCode Integer.parseInt(CARAVAN_VERSION_CODE)
+            versionName project.CARAVAN_VERSION_NAME
+            applicationId project.CARAVAN_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.CARAVAN_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.CARAVAN_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        carexchange {
+            buildConfigField "String", "DEALER_ID", "\"" + project.AUTO_EXCHANGE_DEALER_ID + "\""
+            versionCode Integer.parseInt(AUTO_EXCHANGE_VERSION_CODE)
+            versionName project.AUTO_EXCHANGE_VERSION_NAME
+            applicationId project.AUTO_EXCHANGE_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.AUTO_EXCHANGE_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.AUTO_EXCHANGE_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        expertmotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.EXPERT_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(EXPERT_MOTORS_VERSION_CODE)
+            versionName project.EXPERT_MOTORS_VERSION_NAME
+            applicationId project.EXPERT_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.EXPERT_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.EXPERT_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        machinersparadise {
+            buildConfigField "String", "DEALER_ID", "\"" + project.MACHINERS_PARADISE_DEALER_ID + "\""
+            versionCode Integer.parseInt(MACHINERS_PARADISE_VERSION_CODE)
+            versionName project.MACHINERS_PARADISE_VERSION_NAME
+            applicationId project.MACHINERS_PARADISE_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.MACHINERS_PARADISE_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.MACHINERS_PARADISE_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        speedinc {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SPEED_INC_DEALER_ID + "\""
+            versionCode Integer.parseInt(SPEED_INC_VERSION_CODE)
+            versionName project.SPEED_INC_VERSION_NAME
+            applicationId project.SPEED_INC_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SPEED_INC_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SPEED_INC_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        themotorcade {
+            buildConfigField "String", "DEALER_ID", "\"" + project.THE_MOTORCADE_DEALER_ID + "\""
+            versionCode Integer.parseInt(THE_MOTORCADE_VERSION_CODE)
+            versionName project.THE_MOTORCADE_VERSION_NAME
+            applicationId project.THE_MOTORCADE_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.THE_MOTORCADE_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.THE_MOTORCADE_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        turbomotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.TURBO_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(TURBO_MOTORS_VERSION_CODE)
+            versionName project.TURBO_MOTORS_VERSION_NAME
+            applicationId project.TURBO_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.TURBO_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.TURBO_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        srcmotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SRC_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SRC_MOTORS_VERSION_CODE)
+            versionName project.SRC_MOTORS_VERSION_NAME
+            applicationId project.SRC_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SRC_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SRC_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        venturecars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.VENTURE_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(VENTURE_CARS_VERSION_CODE)
+            versionName project.VENTURE_CARS_VERSION_NAME
+            applicationId project.VENTURE_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.VENTURE_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.VENTURE_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        saalaicars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SAALAI_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SAALAI_CARS_VERSION_CODE)
+            versionName project.SAALAI_CARS_VERSION_NAME
+            applicationId project.SAALAI_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SAALAI_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SAALAI_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        chennaimotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.CHENNAI_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(CHENNAI_MOTORS_VERSION_CODE)
+            versionName project.CHENNAI_MOTORS_VERSION_NAME
+            applicationId project.CHENNAI_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.CHENNAI_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.CHENNAI_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        vijayaamotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.VIJAYAA_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(VIJAYAA_MOTORS_VERSION_CODE)
+            versionName project.VIJAYAA_MOTORS_VERSION_NAME
+            applicationId project.VIJAYAA_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.VIJAYAA_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.VIJAYAA_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        expresshyundai {
+            buildConfigField "String", "DEALER_ID", "\"" + project.EXPRESS_HYUNDAI_DEALER_ID + "\""
+            versionCode Integer.parseInt(EXPRESS_HYUNDAI_VERSION_CODE)
+            versionName project.EXPRESS_HYUNDAI_VERSION_NAME
+            applicationId project.EXPRESS_HYUNDAI_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.EXPRESS_HYUNDAI_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.EXPRESS_HYUNDAI_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        srikamakshidevicars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SRI_KAMAKSHI_DEVI_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SRI_KAMAKSHI_DEVI_CARS_VERSION_CODE)
+            versionName project.SRI_KAMAKSHI_DEVI_CARS_VERSION_NAME
+            applicationId project.SRI_KAMAKSHI_DEVI_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SRI_KAMAKSHI_DEVI_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SRI_KAMAKSHI_DEVI_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        grandcarz {
+            buildConfigField "String", "DEALER_ID", "\"" + project.GRAND_CARZ_DEALER_ID + "\""
+            versionCode Integer.parseInt(GRAND_CARZ_VERSION_CODE)
+            versionName project.GRAND_CARZ_VERSION_NAME
+            applicationId project.GRAND_CARZ_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.GRAND_CARZ_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.GRAND_CARZ_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        titaniummotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.TITANIUM_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(TITANIUM_MOTORS_VERSION_CODE)
+            versionName project.TITANIUM_MOTORS_VERSION_NAME
+            applicationId project.TITANIUM_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.TITANIUM_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.TITANIUM_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        aspreownedcars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.A_AND_S_PREOWNED_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(A_AND_S_PREOWNED_CARS_VERSION_CODE)
+            versionName project.A_AND_S_PREOWNED_CARS_VERSION_NAME
+            applicationId project.A_AND_S_PREOWNED_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.A_AND_S_PREOWNED_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.A_AND_S_PREOWNED_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        gaadiTest {
+            buildConfigField "String", "DEALER_ID", "\"" + project.GAADI_TEST_DEALER_ID + "\""
+            versionCode Integer.parseInt(GAADI_TEST_VERSION_CODE)
+            versionName project.GAADI_TEST_VERSION_NAME
+            applicationId project.GAADI_TEST_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.GAADI_TEST_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.GAADI_TEST_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        jainsCarShoppe {
+            buildConfigField "String", "DEALER_ID", "\"" + project.JAINS_CAR_SHOPPE_DEALER_ID + "\""
+            versionCode Integer.parseInt(JAINS_CAR_SHOPPE_VERSION_CODE)
+            versionName project.JAINS_CAR_SHOPPE_VERSION_NAME
+            applicationId project.JAINS_CAR_SHOPPE_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.JAINS_CAR_SHOPPE_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.JAINS_CAR_SHOPPE_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+        mannadiarCars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.MANNADIAR_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(MANNADIAR_CARS_VERSION_CODE)
+            versionName project.MANNADIAR_CARS_VERSION_NAME
+            applicationId project.MANNADIAR_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.MANNADIAR_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.MANNADIAR_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+       skCarShoppee {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SK_CAR_SHOPPEE_DEALER_ID + "\""
+            versionCode Integer.parseInt(SK_CAR_SHOPPEE_VERSION_CODE)
+            versionName project.SK_CAR_SHOPPEE_VERSION_NAME
+            applicationId project.SK_CAR_SHOPPEE_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SK_CAR_SHOPPEE_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SK_CAR_SHOPPEE_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+
+        prasannaCars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.PRASANNA_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(PRASANNA_CARS_VERSION_CODE)
+            versionName project.PRASANNA_CARS_VERSION_NAME
+            applicationId project.PRASANNA_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.PRASANNA_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.PRASANNA_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        sreeVaishnaviCars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SREE_VAISHNAVI_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SREE_VAISHNAVI_CARS_VERSION_CODE)
+            versionName project.SREE_VAISHNAVI_CARS_VERSION_NAME
+            applicationId project.SREE_VAISHNAVI_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SREE_VAISHNAVI_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SREE_VAISHNAVI_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        sriAishwaryaCars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SRI_AISHWARYA_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SRI_AISHWARYA_CARS_VERSION_CODE)
+            versionName project.SRI_AISHWARYA_CARS_VERSION_NAME
+            applicationId project.SRI_AISHWARYA_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SRI_AISHWARYA_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SRI_AISHWARYA_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        sundaramMotors {
+            buildConfigField "String", "DEALER_ID", "\"" + project.SUNDARAM_MOTORS_DEALER_ID + "\""
+            versionCode Integer.parseInt(SUNDARAM_MOTORS_VERSION_CODE)
+            versionName project.SUNDARAM_MOTORS_VERSION_NAME
+            applicationId project.SUNDARAM_MOTORS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.SUNDARAM_MOTORS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.SUNDARAM_MOTORS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        rrCars {
+            buildConfigField "String", "DEALER_ID", "\"" + project.RR_CARS_DEALER_ID + "\""
+            versionCode Integer.parseInt(RR_CARS_VERSION_CODE)
+            versionName project.RR_CARS_VERSION_NAME
+            applicationId project.RR_CARS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.RR_CARS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.RR_CARS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+
+        deal4wheels {
+            buildConfigField "String", "DEALER_ID", "\"" + project.DEAL4WHEELS_DEALER_ID + "\""
+            versionCode Integer.parseInt(DEAL4WHEELS_VERSION_CODE)
+            versionName project.DEAL4WHEELS_VERSION_NAME
+            applicationId project.DEAL4WHEELS_APPLICATION_ID
+
+            buildConfigField "String", "ACCOUNT_NAME", "\"" + project.DEAL4WHEELS_ACCOUNT_NAME + "\""
+            buildConfigField "String", "ACCOUNT_TYPE", "\"" + applicationId + ".syncadapter.account\""
+
+            resValue "string", "account_type", applicationId + ".syncadapter.account"
+            resValue "string", "account_authority", applicationId + ".provider"
+            resValue "string", "app_name", project.DEAL4WHEELS_APP_NAME
+
+            manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
+                                    onesignal_app_id               : "16b59b4e-a2d2-4cd1-a06f-366af4d75eef",
+                                    onesignal_google_project_number: "215131612211"]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile project.MATERIAL_DESIGN_COMPAT
+    compile project.APP_COMPAT_LIBRARY
+    compile project.CARD_VIEW_COMPAT
+    compile project.GLIDE_LIBRARY
+    compile project.RECYCLER_VIEW_COMPAT
+    compile project.RETROFIT
+//    compile project.MULTIDEX_LIBRARY
+    compile project.LOGGING_INTERCEPTOR
+    compile project.RECYCLER_VIEW_COMPAT
+    compile project.GSON_CONVERTOR
+    compile project.GSON
+    compile project.GOOGLE_PLAY_SERVICE_ANALYTICS
+    compile project.GOOGLE_PLAY_SERVICE_MAP
+    compile project.GOOGLE_PLAY_SERVICE_GCM
+    compile project.APACHE
+    compile project.OTTO_LIBRARY
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.1@aar') {
+        transitive = true;
+    }
+    compile project(':MaterialEditTextLib')
+    //    compile 'com.gaadi.library:Neon:1.0.1'
+//    compile 'com.gaadi.library:scanlibrary:1.0.1'
+
+    compile 'com.google.android.gms:play-services-location:9.4.0'
+    compile 'com.matthew-tamlin:sliding-intro-screen:2.1.2'
+    compile 'com.onesignal:OneSignal:3.+@aar'
+    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.google.android.gms:play-services-appindexing:9.4.0'
+
+}

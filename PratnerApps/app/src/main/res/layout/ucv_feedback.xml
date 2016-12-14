@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthMatchStyling"
+        android:orientation="vertical">
+
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/carmodel"
+                style="@style/TextStyleNormal.Large"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:text="Swift lxi model"
+                android:textSize="15sp"/>
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/carowner"
+                style="@style/TextStyleNormal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="second owner"
+                android:textSize="15sp"/>
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="GOOD CONDITION CAR"
+                android:textSize="21sp"/>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/goodValue"
+                style="@style/TextStyleNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="45sp"/>
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/car_valuation_price_range"
+                style="@style/TextStyleNormal.Small"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/usedCarValuation_price_range"
+                android:textSize="15sp"/>
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/know_more"
+                style="@style/TextStyleNormal.Accent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="Know More"
+                android:textSize="14sp" />
+
+        </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+    <com.gaadi.pratnerapps.theme.DealerButton
+        android:id="@+id/btnSubmit"
+        style="@style/buttonStyle"
+        android:layout_alignParentBottom="true"
+        android:text="Back"/>
+
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+
+

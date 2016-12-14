@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" style="@style/parentLayoutHeightWidthMatchStyling.WrapHeight">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tv_title"
+        style="@style/TextStyleNormal.Large.Bold"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_height="60dp"
+        />
+   <include layout="@layout/border_view_match_width"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        style="@style/TextStyleNormal.MatchWidth.LargePadding"
+        android:textSize="16dp"
+        android:singleLine="false"
+        
+
+        android:layout_height="wrap_content" />
+    <include layout="@layout/border_view_match_width"/>
+    <LinearLayout
+        android:id="@+id/lay_dismiss"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="60dp">
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal.Large.Accent"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+
+            android:layout_height="match_parent"
+            android:text="@string/got_it"
+            />
+    </LinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

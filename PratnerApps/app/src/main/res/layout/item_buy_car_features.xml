@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerRelativeLayout style="@style/layoutHeightWrapWidthMatchStyling.Padding">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvFeature"
+            style="@style/TextStyleNormal.Heading"
+            android:layout_alignParentLeft="true" />
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/ivCheck"
+            style="@style/ImageViewWithTintColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_check" />
+    </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+    <include
+        layout="@layout/border_view_match_width" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

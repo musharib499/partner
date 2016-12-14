@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.reveal.RevealLayout
+        android:id="@+id/sort_menu_container_reveal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <RadioGroup
+            android:id="@+id/radio_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/padding_small">
+
+            <RadioButton
+                android:id="@+id/sort_by_relevance"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+
+                android:text="Relevance" />
+
+            <RadioButton
+                android:id="@+id/sort_by_recent_isted"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+                android:text="Recently Listed" />
+
+            <RadioButton
+                android:id="@+id/sort_by_price_asc"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+                android:text="Price- Low to High"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/sort_by_price_desc"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+                android:text="Price- High to Low"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/sort_by_km_low"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+                android:text="Kilometers- Low to High" />
+
+            <RadioButton
+                android:id="@+id/sort_by_new"
+                style="@style/TextStyleNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:padding="@dimen/padding_small"
+                android:text="Newest First" />
+        </RadioGroup>
+    </com.gaadi.pratnerapps.reveal.RevealLayout>
+
+    <LinearLayout
+        android:id="@+id/remaining_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparentwhite"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+</LinearLayout>

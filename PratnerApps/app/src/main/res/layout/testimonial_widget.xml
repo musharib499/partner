@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/red"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_lovingit"
+            style="@style/TextStyleNormal"
+            android:text="LOVING IT"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_lovingit_name"
+            style="@style/TextStyleNormal"
+            android:layout_marginLeft="8dp"
+            android:text="LOVING IT"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center|start"
+                android:src="@drawable/car_placeholder" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextStyleNormal"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Aaron"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_lovingit_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="@string/testimonial_detail"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_lovingit_date"
+            style="@style/TextStyleNormal"
+            android:layout_alignParentLeft="true"
+            android:text="26/05/16"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_control" />
+
+        <RatingBar
+            android:id="@+id/testimonial_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:numStars="5"
+            android:stepSize="1" />
+    </RelativeLayout>
+
+
+</LinearLayout>

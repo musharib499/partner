@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/mainFrameLayout"
+        style="@style/layoutHeightWidthMatchStyling"
+        />
+    <com.gaadi.pratnerapps.theme.DealerFrameLayout
+        android:id="@+id/menuFrameLayout"
+        style="@style/parentLayoutHeightWidthMatchStyling"
+        android:focusable="true"
+        android:clickable="true"
+        android:alpha="0.9"
+        android:visibility="gone">
+        <include
+            android:id="@+id/recycle_list_menu"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            layout="@layout/layout_recycler_view"/>
+
+    </com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>

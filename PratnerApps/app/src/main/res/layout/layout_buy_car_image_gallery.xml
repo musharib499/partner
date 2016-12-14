@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flImageGallery"
+    android:orientation="vertical" style="@style/parentLayoutHeightWidthMatchStyling">
+
+</com.gaadi.pratnerapps.theme.DealerFrameLayout>

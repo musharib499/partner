@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardViewStyle"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="0dp">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:id="@+id/root_layout"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/imgCar"
+            style="@style/ImageViewStyle.MatchHW.NoPadding"
+           android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:scaleType="centerCrop"
+            android:transitionName="car" />
+
+        <include
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/layout_hz_buy_car" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+
+</com.gaadi.pratnerapps.theme.DealerCardView>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="1dp"
+
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tv_type"
+        style="@style/TextStyleNormal.MatchWidth"
+        android:drawableTint="@color/toggle_text_color"
+        android:gravity="center"
+        android:text="item"
+        android:textColor="@color/toggle_text_color" />
+</com.gaadi.pratnerapps.theme.DealerRelativeLayout>

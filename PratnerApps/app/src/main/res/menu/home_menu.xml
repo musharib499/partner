@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+    <item
+            android:id="@+id/menu_my_profile"
+            android:visible="false"
+            android:icon="@drawable/ic_my_profile"
+            android:title="@string/menu_label_my_profile" />
+
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_home"
+            android:checked="true"
+            android:actionLayout="@android:layout/activity_list_item"
+            android:title="@string/menu_label_home" />
+
+        <item
+            android:id="@+id/menu_buy_car"
+            android:icon="@drawable/ic_buy_car"
+            android:title="@string/menu_label_buy_car" />
+
+
+        <item
+            android:id="@+id/menu_sell_car"
+            android:icon="@drawable/ic_sell_car"
+            android:title="@string/menu_label_sell_car" />
+
+        <item
+            android:id="@+id/menu_finance"
+            android:visible="false"
+            android:icon="@drawable/ic_finance"
+            android:title="@string/menu_label_finance" />
+
+        <item
+            android:id="@+id/menu_insurance"
+            android:visible="false"
+            android:icon="@drawable/ic_insurance"
+            android:title="@string/menu_label_insurance" />
+
+        <item
+            android:id="@+id/menu_notifications"
+            android:visible="false"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/menu_label_notifications" />
+
+        <item
+            android:id="@+id/menu_testimonial"
+            android:visible="true"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/menu_label_testimonial" />
+
+        <item
+            android:id="@+id/menu_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/menu_label_share" />
+
+        <item
+            android:id="@+id/menu_about_us"
+            android:visible="false"
+            android:icon="@drawable/ic_about_us"
+            android:title="@string/menu_label_about_us" />
+
+        <item
+            android:id="@+id/menu_showroom"
+            android:icon="@drawable/ic_showroom"
+            android:title="@string/menu_label_showroom" />
+
+        <item
+            android:id="@+id/menu_contact_us"
+            android:icon="@drawable/ic_contact_us"
+            android:title="@string/menu_label_contact_us" />
+
+    </group>
+</menu>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parentLayoutHeightWidthMatchStyling.Padding"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/border_view_match_height"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_height="@dimen/text_size_xlarge"
+            android:layout_width="@dimen/padding_normal_5dp"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tvFrndDetail"
+            style="@style/TextStyleNormal.XLarge"
+            android:text="Enter Details" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_name"
+        style="@style/EditStyleNormal.MatchWidth"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:hint="Name*"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_contactnum"
+        style="@style/EditStyleNormal.MatchWidth"
+        android:hint="Contact No.*"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:maxLength="10"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        android:id="@+id/et_email"
+        style="@style/EditStyleNormal.MatchWidth"
+        android:hint="Email*"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:met_floatingLabel="highlight" />
+
+    <com.gaadi.pratnerapps.theme.DealerButton
+        android:id="@+id/btn_continue"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginLeft="8dp"
+        style="@style/buttonStyle"
+        android:text="Submit" />
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/border_view_match_height"
+            android:layout_marginLeft="8dp"
+            android:layout_height="@dimen/text_size_xlarge"
+            android:layout_width="@dimen/padding_normal_5dp"/>
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/frndInvite"
+            style="@style/TextStyleNormal.XLarge"
+            android:text="Invite Your Friend" />
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            style="@style/TextStyleNormal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/textview_fixheight"
+            android:layout_weight=".5"
+            android:background="@drawable/border_rectangular_gray"
+            android:gravity="center"
+            android:text="PROMOCODE:" />
+
+        <com.gaadi.pratnerapps.theme.DealerTextView
+            android:id="@+id/tv_promocode"
+            style="@style/TextStyleNormal.Accent"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/textview_fixheight"
+            android:layout_weight=".5"
+            android:background="@drawable/border_rectangular"
+            android:gravity="center"
+            android:text="ABCYZZ" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+        style="@style/layoutHeightWrapWidthMatchStyling"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="20dp">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/ImageViewStyle"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/whatsup" />
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/textsms"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/ImageViewStyle"
+            app:tint_color="icon_color"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_textsms" />
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/mail"
+            android:layout_width="64dp"
+            style="@style/ImageViewStyle"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_email" />
+    </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/facebook"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/ImageViewStyle"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/facebook" />
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/twitter"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/ImageViewStyle"
+            android:layout_centerInParent="true"
+            android:src="@drawable/twitter" />
+
+        <com.gaadi.pratnerapps.theme.DealerImageView
+            android:id="@+id/more"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/ImageViewStyle"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_more" />
+    </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

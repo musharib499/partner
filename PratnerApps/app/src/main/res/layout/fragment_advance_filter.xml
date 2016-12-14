@@ -1,0 +1,44 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    tools:context=".fragments.buy_car.BuyCarAdvanceFilterFragment">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthMatchStyling"
+        android:orientation="vertical">
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:id="@+id/framelayoutColor"
+            style="@style/CardViewStyle" />
+
+        <!--
+
+                <com.gaadi.pratnerapps.theme.DealerCardView
+                    android:id="@+id/flFuelType"
+                    style="@style/CardViewStyle" />
+        -->
+
+
+        <com.gaadi.pratnerapps.theme.DealerCardView
+            android:id="@+id/framelayoutBody"
+            style="@style/CardViewStyle" />
+
+
+        <!--    <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flOwnerType"
+                style="@style/CardViewStyle" />
+
+
+            <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flTransmissionType"
+                style="@style/CardViewStyle" />
+
+
+            <com.gaadi.pratnerapps.theme.DealerCardView
+                android:id="@+id/flListingType"
+                style="@style/CardViewStyle" />-->
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+</ScrollView>

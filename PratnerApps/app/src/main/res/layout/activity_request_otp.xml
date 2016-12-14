@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+<!--
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarInclude"
+        app:background_color="primary_color"
+        android:layout_height="wrap_content">-->
+
+        <include layout="@layout/toolbar_navigation" />
+<!--
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>-->
+
+
+<com.gaadi.pratnerapps.theme.DealerLinearLayout android:orientation="vertical"
+    android:gravity="center"
+    android:layout_below="@+id/toolbarInclude"
+    style="@style/layoutHeightWrapWidthMatchStyling"
+    android:padding="@dimen/margin_large">
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        style="@style/EditStyleNormal.MatchWidth"
+        android:id="@+id/et_name"
+        android:padding="@dimen/margin_small"
+        android:hint="Enter Name"
+        android:imeOptions="actionNext"
+        app:met_floatingLabel="highlight"/>
+
+    <com.gaadi.pratnerapps.theme.DealerMaterialEditText
+        style="@style/EditStyleNormal.MatchWidth"
+        android:id="@+id/et_mobile"
+        android:padding="@dimen/margin_small"
+        android:hint="Enter Mobile number"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:gravity="center_vertical"
+        app:met_floatingLabel="highlight"/>
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal.MatchWidth"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        app:text_color="secondary_info_text"
+        android:text="@string/otp_text"
+        android:gravity="center"/>
+
+
+    <com.gaadi.pratnerapps.theme.DealerFAB
+        android:id="@+id/btn_next"
+        style="@style/FabStyling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp" />
+
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal.XLarge"
+        app:text_color="heading_color"
+        android:id="@+id/skip_text"
+        android:text="@string/skip_text"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center"/>
+
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>

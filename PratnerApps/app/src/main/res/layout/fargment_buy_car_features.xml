@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutHeightWidthMatchStyling"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        style="@style/TextStyleNormal.Large.GridColor.Bold.LargePaading"
+        android:text="@string/featur" />
+
+    <include layout="@layout/border_view_match_width" />
+
+    <include layout="@layout/layout_recycler_view" />
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

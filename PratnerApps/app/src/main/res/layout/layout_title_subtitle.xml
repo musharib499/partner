@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvTitle"
+        style="@style/TextStyleXXLarge.White" />
+
+    <com.gaadi.pratnerapps.theme.DealerTextView
+        android:id="@+id/tvSubTitle"
+        style="@style/TextStyleNormal.Large.Title" />
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

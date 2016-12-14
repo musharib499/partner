@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Gear Boxdfbudf" />
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Drive Type"/>
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Seating Capacity"/>
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Clutch Type"/>
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Front Suspension"/>
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Rear Suspension"/>
+        <TextView
+            style="@style/TextStyleNormal.MatchWidth"
+            android:text="Steering Type"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_gearbox"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="Dual clutch"/>
+        <TextView
+            android:id="@+id/tv_drivetype"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="AWD"/>
+        <TextView
+            android:id="@+id/tv_stCapacity"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="2"/>
+        <TextView
+            android:id="@+id/tv_clutchtype"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="Dual Clutch"/>
+        <TextView
+            android:id="@+id/tv_frntSuspension"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="Double Wishbone"/>
+        <TextView
+            android:id="@+id/tv_rearSunspension"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="MultiLink"/>
+        <TextView
+            android:id="@+id/tv_steeringtype"
+            style="@style/TextStyleNormal.grayBorder"
+            android:singleLine="true"
+            android:text="Power"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<com.gaadi.pratnerapps.theme.DealerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentLayoutHeightWidthMatchStyling"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthMatchStyling"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerFrameLayout
+            style="@style/parentLayoutHeightWidthMatchStyling"
+            android:layout_width="0dp"
+            android:layout_weight="1.3">
+        <fragment
+            android:id="@+id/content_left"
+            android:name="com.gaadi.pratnerapps.fragments.buy_car.BuyCarFilterLeftItemFragment"
+            style="@style/parentLayoutHeightWidthMatchStyling" />
+        </com.gaadi.pratnerapps.theme.DealerFrameLayout>
+
+
+        <com.gaadi.pratnerapps.theme.DealerFrameLayout
+            android:id="@+id/content_right"
+            style="@style/parentLayoutHeightWidthMatchStyling"
+            android:layout_width="0dp"
+            android:layout_weight="3" />
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+    <com.gaadi.pratnerapps.theme.DealerLinearLayout
+        style="@style/layoutHeightWidthMatchStyling"
+        android:layout_height="@dimen/bottom_btn_height"
+        android:orientation="horizontal">
+
+        <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+
+            android:id="@+id/btn_cancel"
+            style="@style/parentLayoutHeightWidthMatchStyling"
+            android:layout_width="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1.3"
+            android:gravity="center">
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                style="@style/TextStyleNormal.Large"
+                android:text="@string/cancel" />
+
+        </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+        <com.gaadi.pratnerapps.theme.DealerRelativeLayout
+
+            android:id="@+id/btn_apply"
+            style="@style/parentLayoutHeightWidthMatchStyling.Accent"
+            android:layout_width="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <com.gaadi.pratnerapps.theme.DealerTextView
+                android:id="@+id/tv_next_cheack"
+                style="@style/TextStyleNormal.Large.Title"
+                android:text="Apply Filter" />
+
+        </com.gaadi.pratnerapps.theme.DealerRelativeLayout>
+
+    </com.gaadi.pratnerapps.theme.DealerLinearLayout>
+
+</com.gaadi.pratnerapps.theme.DealerLinearLayout>

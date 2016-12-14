@@ -1,0 +1,282 @@
+<resources>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="testimonial_detail">The car I bought in good condition and\n
+        servises offered by the Aaron where pretty amaging. \n
+        The dolhar who helped me in anywhere</string>
+    <string name="go_to_app_settings">Go to App Settings</string>
+    <string name="model_name">Model Name</string>
+    <string name="select_city">Search City</string>
+    <string name="find_used_car">Find Used Car</string>
+    <string name="think_car_think_gaadi">Think Car Think Gaadi</string>
+    <string name="recent_list_cars">Recent Listing</string>
+    <string name="action_favorites">Favorites</string>
+
+    <string name="year">Year</string>
+    <string name="fuel">Fuel</string>
+    <string name="posted">Posted By</string>
+    <string name="insurance">Insurance</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="transmission">Transmission</string>
+    <string name="owner">Owner</string>
+    <string name="color">Color</string>
+    <string name="registration_city">Registration City</string>
+
+    <string name="overall_height">Overall Height</string>
+    <string name="wheel_base">Wheel Base</string>
+    <string name="ground_clearnce">Ground Clearence</string>
+    <string name="power">Power</string>
+    <string name="fue_tank_capacity">Fuel Tank Capacity</string>
+    <string name="no_of_cylinders">No. of Cylinders</string>
+    <string name="torque">Torque</string>
+    <string name="seating_capacity">Seating Capacity</string>
+    <string name="get_info">Get Seller Details</string>
+    <string name="overall_length">Overall Length</string>
+    <string name="overall_width">Overall Width</string>
+    <string name="certified_by">Certified by</string>
+    <string name="service_history">Service History</string>
+    <string name="not_stolen">Not Stolen</string>
+    <string name="non_accidental">Non Accidental</string>
+    <string name="overall_rating">Overall rating</string>
+    <string name="view_evaluation_report">View Evaluation Report</string>
+
+    <string name="testimonial">Description</string>
+    <string name="testimonial_tital">Testimonials</string>
+    <string name="recently_listed">Recently Listed</string>
+    <string name="price_low_to_high">Price - Low to High</string>
+    <string name="price_high_to_low">Price - High to Low</string>
+    <string name="km_low_to_high">KM - Low to High</string>
+    <string name="km_high_to_low">KM - High to Low</string>
+    <string name="year_new_first">Year - Newest First</string>
+    <string name="sort">Sort</string>
+    <string name="search_result">Search Result</string>
+    <string name="listingfake">Listing is fake</string>
+    <string name="sellernotconnectble">Seller is not connectable</string>
+    <string name="photonotvisible">Photos not visible</string>
+    <string name="carsold">Car already sold</string>
+    <string name="feedback_cancel">Any other reason?Please let us know..</string>
+    <string name="get_seller_details">Get Seller Details</string>
+    <string name="removecartitle">Why do you want to remove this car ?</string>
+
+    <string name="error_make_model_required" translatable="false">Make Model is required</string>
+    <string name="make_model_invalid" translatable="false">Make Model is invalid</string>
+    <string name="error_make_model_invalid" translatable="false">Make Model is Invalid</string>
+    <string name="reg_mon_year_required" translatable="false">Registration month and year is required</string>
+    <string name="error_kms_driven_rquired" translatable="false">Enter kms driven</string>
+    <string name="error_num_owners_required" translatable="false">Number of owners is required</string>
+    <string name="error_registration_city_required" translatable="false">Registration city is required</string>
+    <string name="error_city_invalid" translatable="false">City is invalid</string>
+    <string name="error_stock_year_required" translatable="false">Stock model and year required</string>
+    <string name="error_year_required" translatable="false">Year is required</string>
+
+
+    <string name="description">Description</string>
+    <string name="st_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s stan... more</string>
+    <string name="emptytext">Nothing to show</string>
+    <string name="petrol">Petrol</string>
+    <string name="testinomial_description">I purched a BMW 6 series from Gaadi.The car was an absolute\n
+             joy to derive and they took care of all the  boring paper work\n
+                 making the transaction smooth and easy</string>
+    <string name="value_year_kms_type">%1$s \u2022 %2$s \u2022 %3$s</string>
+    <string name="year_kms_type">2013  \u2022  20,000 kms  \u2022  Petrol</string>
+    <string name="year_kms_type_value">%1$s \u2022 %2$s \u2022 %3$s</string>
+
+    <string name="direction">Get Directions</string>
+    <string name="connect">Connect with us</string>
+
+    <!--Array model string list-->
+    <string-array name="filter_left_item">
+        <item>Price</item>
+        <item>Kms</item>
+        <item>Make &amp; Models</item>
+        <item>Advanced</item>
+    </string-array>
+
+     <string name="know_more_descripsion">Suggested Prices depends on following conditions:\n
+     &#8226; Valuation is for vehicle with no major structural damage\n
+   &#8226; Cost incurred for vehicle insurance is not included\n
+   &#8226; Value for aftermarket accessories is not accounted</string>
+    <string name="used_car_valuation_price_range">Subject to condition, valuation will be \n between \u20B9 %1$s  to  \u20B9 %2$s</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="price">price</string>
+    <string name="price_sellCars">Price*</string>
+    <string name="min">MIN</string>
+    <string name="max">MAX</string>
+    <string name="cancel">Cancel</string>
+    <string name="personName">Name*</string>
+    <string name="contactNum">Contact No.*</string>
+    <string name="email">Email*</string>
+    <string name="location">Location*</string>
+    <string name="kmsDriven">Kilometers Driven*</string>
+    <string name="makeYear">Make Year*</string>
+    <string name="makemonth">Make Month*</string>
+    <string name="regPlace">Registration Place*</string>
+    <string name="city">City*</string>
+    <string name="error_model_version_required">Variant is required</string>
+    <string name="error_make_is_required">Make is required</string>
+    <string name="menu_label_my_profile">My Profile</string>
+    <string name="menu_label_home">Home</string>
+    <string name="menu_label_buy_car">Buy Car</string>
+    <string name="menu_label_sell_car">Sell Car</string>
+    <string name="menu_label_finance">Finance</string>
+    <string name="menu_label_insurance">Insurance</string>
+    <string name="menu_label_notifications">Notifications</string>
+    <string name="menu_label_share">Share</string>
+    <string name="menu_label_about_us">About Us</string>
+    <string name="menu_label_showroom">Showroom</string>
+    <string name="menu_label_contact_us">Contact Us</string>
+    <string name="error_model_required">Model is required</string>
+    <string name="error_price_is_required">Price is required</string>
+    <string name="error_registration_place_is_required">Registration Place is required</string>
+    <string name="error_registration_year_is_required">Registration year is required</string>
+    <string name="error_kms_driven_is_required">Kms Driven is required</string>
+    <string name="error_city_is_required">City is required</string>
+    <string name="enter_valid_name">Enter valid name</string>
+    <string name="enter_valid_contactnum">Enter valid contact number</string>
+    <string name="call_request">Request a Call</string>
+    <string name="overView">Overview</string>
+    <string name="featur">Features</string>
+    <string name="cup_holders">Cup Holders</string>
+    <string name="folding_rear_seat">Folder Rear Seat</string>
+    <string name="tachometer">Tachometer</string>
+    <string name="leather_seats">Leather Seats</string>
+    <string name="tubeless_tyres">Tubeless Tyres</string>
+    <string name="sun_roof">Sun Roof</string>
+    <string name="fog_fight">Fog Fight</string>
+    <string name="wash_wiper">Wash Wiper</string>
+    <string name="defogger">Defogger</string>
+    <string name="display_screen">Display Screen</string>
+    <string name="car_stereo">Car Stereo</string>
+    <string name="steering_adjustment">Streering Adjustment</string>
+    <string name="power_steering">Power Steering</string>
+    <string name="power_seats">Power Seats</string>
+    <string name="power_windows">Power Windows</string>
+    <string name="remote_boot_fuel_lid">Remote Boot Fuel Lid</string>
+    <string name="traction_contorl">Traction Contorl</string>
+    <string name="immobilizer">Immobilizer</string>
+    <string name="drive_airbag">Driver Airbag</string>
+    <string name="thefty_alarm">Anti Thefty Alarm</string>
+    <string name="child_safety_lock">Child Safety Lock</string>
+    <string name="power_doors_locks">Power Doors Locks</string>
+    <string name="central_locking">Central Locking</string>
+    <string name="antilock_breaking_system">Antilock Breaking System</string>
+    <string name="carversion">Version</string>
+    <string name="created_date">List Date</string>
+    <string name="kilometr">KMs Driven</string>
+    <string name="car_certification">Car Certification</string>
+    <string name="btn_submit">Submit</string>
+    <string name="progress_dialog_msg">please wait..</string>
+    <string name="network_connection_error">Network Connection Problem!</string>
+    <string name="services">Book Services</string>
+
+    <string name="color_type">Color </string>
+    <string name="body_type">Body Type</string>
+    <string name="showroom">Showroom</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="conditions">Conditions</string>
+    <string name="make">Make*</string>
+    <string name="loving_it">LOVING IT</string>
+    <string name="_1_1_cr">1.1 cr</string>
+    <string name="automobile">AutoMobile</string>
+    <string name="_2016">2016</string>
+    <string name="_2000_kms">2000 kms</string>
+    <string name="search">Search</string>
+    <string name="call_now">CALL NOW</string>
+    <string name="request_a_call">REQUEST A CALL</string>
+    <string name="sort_by">Sort By</string>
+    <string name="oldest">Oldest</string>
+    <string name="newest">Newest</string>
+    <string name="action_search">Search</string>
+    <string name="makemodel">Make/Model</string>
+    <string name="advance">Advanced</string>
+    <string name="Price">Price</string>
+    <string name="km">Kms</string>
+
+    <!--internet connection string-->
+    <string name="no_connection">No internet connection!</string>
+    <string name="no_connection_title">No Internet</string>
+    <string name="cancel_button_text">OK</string>
+    <string name="welcome_message">Welcome to</string>
+    <string name="sell_car">Sell Car</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="available_car">Available Cars</string>
+    <string name="refer_friends">Refer a Friend</string>
+    <string name="filter">Filter</string>
+    <string name="request_call">Request Call</string>
+    <string name="notification">Notifications</string>
+    <string name="menu_label_testimonial">Testimonials</string>
+    <string name="otp_text">A One Time Password (OTP) will be sent to this mobile no. via SMS</string>
+    <string name="otp_resend">Having trouble with OTP ? <u>Click here</u> to got it again!</string>
+    <string name="skip_text">or <u>Skip</u> for now</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="do_you_really_want_to_exit">Do you really want to exit ?</string>
+    <string name="finance">Finance</string>
+    <string name="server_error_msg">Something went wrong, Please try later.</string>
+    <string name="error_month_is_required">Month is required</string>
+    <string name="error_year_is_required">Year is required</string>
+    <string name="used_car">Used Car Valuation</string>
+    <string name="usedCarValuation_price_range">Subject to condition, valuation will be \\n between \\u20B9 %1$s  to  \\u20B9 %2$s</string>
+    <string name="got_it">Got it</string>
+    <string name="know_more_title">Know More</string>
+    <string name="policy_num_is_req">Policy number is required</string>
+    <string name="policy_due_date_is_req">Policy due date is required</string>
+    <string name="company_is_req">Company is required</string>
+    <string name="enable_internet">Please enable your internet connection or try again later</string>
+    <string name="menu_logout">LogOut</string>
+    <string name="want_pick_up">Want Pick Up</string>
+    <string name="email_address">Email Address*</string>
+    <string name="continue_">CONTINUE</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="pick_up_address_line1">Pick-up Address</string>
+    <string name="error_date_required">Date can\'t be empty.</string>
+    <string name="error_time_required">Time can\'t be empty.</string>
+    <string name="error_address_required">Address can\'t be empty.</string>
+    <string name="error_name_required">Name can\'t be empty.</string>
+    <string name="error_phone_required">Phone No. can\'t be empty.</string>
+    <string name="error_name_min">Name should contain atleast 3 characters.</string>
+    <string name="error_email_required">Email can\'t be empty.</string>
+
+    <string name="pick_up_details">Pick Up Details</string>
+    <string name="service_timing">Service Timings</string>
+    <string name="pick_up_on">Pick Up On</string>
+    <string name="review_booking">Review Booking</string>
+    <string name="services_selected">Services Selected</string>
+    <string name="pick_up_from">Pick Up From : %1$s </string>
+    <string name="service_title_msg">Thank you.</string>
+
+    <string name="service_book_msg">Your car service has been booked. \n
+        We will be in touch to assist you with your car service.</string>
+    <string name="refer_friend_title_msg">Thanks  you for details.</string>
+    <string name="refer_friend_msg">Our representative will soon get in \n
+        touch with your friend.</string>
+    <string name="testimonial_title_msg">Thanks for you feedback.</string>
+    <string name="testimonial_book_msg">Your testimonial will be reviewed and published soon!.</string>
+    <string name="buy_car_title_msg">Thanks for you interest.</string>
+    <string name="buy_car_msg">Our representative will soon get in \n
+        touch with you.</string>
+    <string name="sell_car_title_msg">Thanks for submitting the details.</string>
+    <string name="sell_car_msg">Our representative will soon get in \n
+        touch with you.</string>
+    <string name="finance_title_msg">your finance query has been submitted.</string>
+    <string name="finance_msg">Our representative will soon get in \n
+        touch with you.</string>
+    <string name="insurance_title_msg">your insurance query has been submitted.</string>
+    <string name="insurance_msg">Our representative will soon get in \n
+        touch with you.</string>
+
+    <string name="testimonial_text">Write Testimonial</string>
+    <string name="upload_pic">Upload Picture</string>
+    <string name="name">Name</string>
+    <string name="add_testimonial">Add Testimonial</string>
+    <string name="error_registration_no_required">Registration No Required</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="hint_email">Email Address*</string>
+
+
+</resources>
